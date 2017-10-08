@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,6 +40,11 @@ public class Controller extends Main implements Initializable {
     private int answered = 0;
     @FXML
     private Button SubmitAll;
+
+    private Image hamburger = new Image("/resources/hamburger.png");
+    private Image userIcon = new Image("/resources/userIcon.png");
+    @FXML
+    private ImageView hamburgerView = new ImageView(hamburger);
 
 
     @Override

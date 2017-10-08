@@ -34,9 +34,9 @@
                           </font>
                       </Button>
                       <Button layoutX="355.0" layoutY="379.0" mnemonicParsing="false" text="Create Account" />
-                      <ImageView fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                      <ImageView fx:id="logoView" fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                           <image>
-                              <Image url="@../../../../Pictures/dsdt.png" />
+                              <Image url="@../../resources/dsdt.png" />
                           </image>
                       </ImageView>
                       <PasswordField layoutX="385.0" layoutY="225.0" />
@@ -46,14 +46,14 @@
          <top>
             <AnchorPane prefHeight="40.0" prefWidth="640.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="hambergerView" fitHeight="32.0" fitWidth="43.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../hamburger.png" />
+                        <Image url="@../../resources/hamburger.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userView" fitHeight="32.0" fitWidth="43.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../usericon.png" />
+                        <Image url="@../../resources/usericon.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="688.0" layoutY="11.0" text="User" />
