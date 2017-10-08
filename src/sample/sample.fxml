@@ -12,82 +12,74 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="585.0" prefWidth="1143.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
-      <AnchorPane minHeight="-Infinity" prefHeight="401.0" prefWidth="640.0">
+      <AnchorPane maxHeight="509.0" maxWidth="1272.0" prefHeight="509.0" prefWidth="1272.0">
          <children>
-            <BorderPane prefHeight="399.0" prefWidth="640.0">
+            <BorderPane layoutX="-2.0" maxHeight="800.0" maxWidth="1285.0" prefHeight="565.0" prefWidth="975.0">
                <center>
-                  <ScrollPane minHeight="359.0" prefHeight="359.0" prefWidth="678.0" BorderPane.alignment="CENTER">
+                  <ScrollPane prefHeight="511.0" prefWidth="1195.0" BorderPane.alignment="CENTER">
                      <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="622.0">
+                        <AnchorPane prefHeight="406.0" prefWidth="977.0">
                            <children>
-                              <AnchorPane prefHeight="371.0" prefWidth="647.0">
+                              <AnchorPane layoutX="383.0" layoutY="-4.0" maxHeight="-1.0" maxWidth="-1.0" visible="false">
                                  <children>
-                                    <AnchorPane prefHeight="241.0" prefWidth="640.0">
+                                    <Label layoutX="190.0" layoutY="98.0" text="Username:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="192.0" layoutY="165.0" text="Password:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="userNameField" layoutX="301.0" layoutY="94.0" />
+                                    <Button fx:id="logInBtn" layoutX="283.0" layoutY="256.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="271.0" layoutY="319.0" mnemonicParsing="false" text="Create Account" />
+                                    <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Pictures/dsdt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <PasswordField layoutX="301.0" layoutY="165.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="4.0" layoutY="-5.0" prefHeight="505.0" prefWidth="1247.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="487.0" layoutY="57.0">
                                        <children>
-                                        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="328.0" prefWidth="640.0" visible="false">
-                                             <children>
-                                                <Label layoutX="190.0" layoutY="98.0" text="Username:">
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="192.0" layoutY="165.0" text="Password:">
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextField fx:id="userNameField" layoutX="301.0" layoutY="94.0" />
-                                                <Button fx:id="logInBtn" layoutX="283.0" layoutY="256.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Button>
-                                                <Button layoutX="271.0" layoutY="319.0" mnemonicParsing="false" text="Create Account" />
-                                                <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../../../../Pictures/dsdt.png" />
-                                                   </image>
-                                                </ImageView>
-                                                <PasswordField layoutX="301.0" layoutY="165.0" />
-                                             </children>
-                                        </AnchorPane>
-                                          <AnchorPane prefHeight="314.0" prefWidth="640.0">
-                                             <children>
-                                                <VBox alignment="TOP_CENTER" layoutX="234.0" layoutY="59.0" prefHeight="200.0" prefWidth="171.0">
-                                                   <children>
-                                                      <Label fx:id="lessonLabel" prefHeight="53.0" prefWidth="69.0" text="Lessons" textAlignment="CENTER">
-                                                         <font>
-                                                            <Font size="20.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label fx:id="lessonLabel" prefHeight="42.0" prefWidth="113.0" text="Assignments">
-                                                         <font>
-                                                            <Font size="20.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label fx:id="lessonLabel" prefHeight="57.0" prefWidth="41.0" text="Quiz">
-                                                         <font>
-                                                            <Font size="20.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label fx:id="lessonLabel" prefHeight="44.0" prefWidth="62.0" text="Grades">
-                                                         <font>
-                                                            <Font size="20.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </VBox>
-                                                <ImageView fx:id="logo" fitHeight="90.0" fitWidth="89.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../../../../Pictures/dsdt.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </children>
-                                          </AnchorPane>
+                                          <Label fx:id="lessonLabel" prefHeight="53.0" prefWidth="137.0" text="Lessons" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lessonLabel" prefHeight="53.0" prefWidth="217.0" text="Assignments">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lessonLabel" prefHeight="57.0" prefWidth="105.0" text="Quiz">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lessonLabel3" prefHeight="53.0" prefWidth="113.0" text="Grades">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
                                        </children>
-                                    </AnchorPane>
+                                    </VBox>
+                                    <ImageView fx:id="logo" fitHeight="152.0" fitWidth="162.0" layoutX="55.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Pictures/dsdt.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </AnchorPane>
                            </children>
@@ -96,19 +88,19 @@
                   </ScrollPane>
                </center>
                <top>
-                  <AnchorPane prefHeight="40.0" prefWidth="655.0" style="-fx-background-color: LIGHT-GRAY;" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="90.0" prefWidth="1257.0" style="-fx-background-color: LIGHT-GRAY;" BorderPane.alignment="CENTER">
                      <children>
-                        <Label fx:id="userLabel" layoutX="524.0" layoutY="2.0" text="User">
+                        <Label fx:id="userLabel" layoutX="990.0" layoutY="14.0" prefHeight="55.0" prefWidth="100.0" text="User">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="36.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="idPhoto" fitHeight="35.0" fitWidth="69.0" layoutX="591.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="idPhoto" fitHeight="68.0" fitWidth="70.0" layoutX="1104.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../usericon.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="hamburgler" fitHeight="29.0" fitWidth="33.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="hamburgler" fitHeight="62.0" fitWidth="70.0" layoutX="7.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../hamburger.png" />
                            </image>
