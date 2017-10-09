@@ -50,10 +50,7 @@ public class Controller extends Main implements Initializable {
     @FXML ImageView userView = new ImageView();
     @FXML ImageView logoView = new ImageView();
     @FXML ImageView logoView1 = new ImageView();
-
-
-    Lesson lesson = new Lesson();
-
+    @FXML ImageView lessonImage = new ImageView();
 
     @FXML
     Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane = new Pane();
@@ -138,10 +135,13 @@ public class Controller extends Main implements Initializable {
     public void productRuleHandler()
     {
         switchPane("lessons");
-        lesson.setLesson(0);
+
+
     }@FXML
     public void powerRuleHandler()
     {
+        Lesson lesson1 = new Lesson(1);
+        lessonImage.setImage(lesson1.getLessonImage());
         switchPane("lessons");
 
     }@FXML
