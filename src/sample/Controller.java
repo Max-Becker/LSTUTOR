@@ -50,10 +50,11 @@ public class Controller extends Main implements Initializable {
     @FXML ImageView userView = new ImageView();
     @FXML ImageView logoView = new ImageView();
 
+    Lesson lesson = new Lesson();
 
 
     @FXML
-    Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane = new Pane();
+    Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane = new Pane();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     hamburgerView.setImage(hamburger);
@@ -63,12 +64,7 @@ public class Controller extends Main implements Initializable {
     @FXML
 
     public void loginButtonHandler(ActionEvent event) throws Exception{
-        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("lesson1.fxml"));
-        Scene newScene = new Scene(newSceneRoot);
-
-        Stage window = (Stage) (((Node)event.getSource()).getScene().getWindow());
-        window.setScene(newScene);
-        window.show();
+     switchPane("mainMenu");
     }
 
     public void nextLesson1Handler(ActionEvent event) throws Exception{
@@ -138,6 +134,7 @@ public class Controller extends Main implements Initializable {
     public void productRuleHandler()
     {
         switchPane("lessons");
+        lesson.setLesson(0);
     }@FXML
     public void powerRuleHandler()
     {
@@ -303,7 +300,7 @@ public class Controller extends Main implements Initializable {
 
     //switchPanes
     public void switchPane (String visiblePane){
-        Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu= false;
+        Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu= false, mainMenu = false;
         if (visiblePane.equals("logIn"))
         {
             logIn = true;
@@ -324,10 +321,15 @@ public class Controller extends Main implements Initializable {
         {
             lessons = true;
         }
+        if (visiblePane.equals("mainMenu"))
+        {
+            mainMenu = true;
+        }
         lessonPane.setVisible(lessons);
         lessonMenuPane.setVisible(lessonMenu);
         loginPane.setVisible(logIn);
         quizPane.setVisible(quiz);
         gradePane.setVisible(grades);
+        mainMenuPane.setVisible(mainMenu);
     }
 }

@@ -25,11 +25,11 @@
                     <items>
                         <MenuItem id="sidequizzes" mnemonicParsing="false" onAction="#squizzesHandler" text="Quizzes" />
                         <MenuItem id="sidechangeAssignment" mnemonicParsing="false" onAction="#changeAssignmentHandler" text="Change Assignment" />
-                        <MenuItem id="sideChangeLesson" mnemonicParsing="false" onAction="#changLessonHandler" text="Change Lesson" />
+                        <MenuItem id="sideChangeLesson" mnemonicParsing="false" onAction="#changLessonHandler" text="Change sample.Lesson" />
                         <MenuItem id="sideLogout" mnemonicParsing="false" onAction="#logoutHandler" text="Logout" />
                     </items>
                 </MenuButton>
-                <Label layoutX="230.0" layoutY="-3.0" prefHeight="34.0" prefWidth="202.0" text="Lesson #4: Quotient Rule" AnchorPane.topAnchor="-3.0">
+                <Label layoutX="230.0" layoutY="-3.0" prefHeight="34.0" prefWidth="202.0" text="sample.Lesson #4: Quotient Rule" AnchorPane.topAnchor="-3.0">
                     <font>
                         <Font name="System Bold Italic" size="17.0" />
                     </font>
