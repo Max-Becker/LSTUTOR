@@ -40,11 +40,11 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="mainMenuPane" layoutX="-1.0" layoutY="-1.0" prefHeight="571.0" prefWidth="809.0" visible="false">
+                  <AnchorPane fx:id="mainMenuPane" layoutX="-1.0" layoutY="-1.0" prefHeight="571.0" prefWidth="809.0">
                      <children>
                         <ImageView fx:id="logoView1" fitHeight="138.0" fitWidth="119.0" layoutX="348.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/dsdt.png" />
+                              <Image url="@resources/dsdt.png" />
                            </image>
                         </ImageView>
                         <VBox alignment="TOP_CENTER" layoutX="276.0" layoutY="147.0" prefHeight="385.0" prefWidth="270.0" style="-fx-background-color: f4f4f4;">
@@ -73,7 +73,7 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                    <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0">
+                    <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
                         <children>
                             <Label layoutX="274.0" layoutY="158.0" text="Username:">
                                 <font>

@@ -49,6 +49,8 @@ public class Controller extends Main implements Initializable {
     @FXML ImageView hamburgerView = new ImageView();
     @FXML ImageView userView = new ImageView();
     @FXML ImageView logoView = new ImageView();
+    @FXML ImageView logoView1 = new ImageView();
+
 
     Lesson lesson = new Lesson();
 
@@ -60,6 +62,8 @@ public class Controller extends Main implements Initializable {
     hamburgerView.setImage(hamburger);
     userView.setImage(userIcon);
     logoView.setImage(logo);
+    logoView1.setImage(logo);
+    switchPane("logIn");
     }
     @FXML
 
@@ -120,10 +124,10 @@ public class Controller extends Main implements Initializable {
     public void gradeHandler(){
         switchPane("grades");
 
-    }@FXML
+    }
+    @FXML
     public void logoutHandler(){
         switchPane("logIn");
-
     }
     @FXML
     public void lessonMenuHandler(){
@@ -231,10 +235,6 @@ public class Controller extends Main implements Initializable {
             else
                 displayReaction(0);
         }
-    }
-    @FXML
-    public void logoutHandler(ActionEvent actionEvent)
-    {
     }
     @FXML
     public void changLessonHandler(ActionEvent actionEvent)
