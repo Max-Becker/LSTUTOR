@@ -6,18 +6,20 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 
 import javax.swing.*;
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller extends Main implements Initializable {
-
     @FXML
     private RadioButton  Q1A;
     @FXML
@@ -41,15 +43,22 @@ public class Controller extends Main implements Initializable {
     @FXML
     private Button SubmitAll;
 
-    private Image hamburger = new Image("/resources/hamburger.png");
-    private Image userIcon = new Image("/resources/userIcon.png");
+    Image hamburger = new Image("/resources/hamburger.png");
+    Image userIcon = new Image("/resources/usericon.png");
+    Image logo = new Image("/resources/dsdt.png");
+    @FXML ImageView hamburgerView = new ImageView();
+    @FXML ImageView userView = new ImageView();
+    @FXML ImageView logoView = new ImageView();
+
+
+
     @FXML
-    private ImageView hamburgerView = new ImageView(hamburger);
-
-
+    Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane = new Pane();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+    hamburgerView.setImage(hamburger);
+    userView.setImage(userIcon);
+    logoView.setImage(logo);
     }
     @FXML
 
@@ -97,6 +106,55 @@ public class Controller extends Main implements Initializable {
         window.setScene(newScene);
         window.show();
     }
+
+    //Side Menu
+    @FXML
+    public void sideMenuButtonHandler() throws Exception{
+        sideMenuPane.setVisible(true);
+    }
+    @FXML
+    public void closeButtonHandler() throws Exception{
+        sideMenuPane.setVisible(false);
+    }
+    @FXML
+    public void quizHandler(){
+        switchPane("quiz");
+    }
+    @FXML
+    public void gradeHandler(){
+        switchPane("grades");
+
+    }@FXML
+    public void logoutHandler(){
+        switchPane("logIn");
+
+    }
+    @FXML
+    public void lessonMenuHandler(){
+        switchPane("lessonMenu");
+    }
+    //Lessons
+    @FXML
+    public void productRuleHandler()
+    {
+        switchPane("lessons");
+    }@FXML
+    public void powerRuleHandler()
+    {
+        switchPane("lessons");
+
+    }@FXML
+    public void chainRuleHandler()
+    {
+        switchPane("lessons");
+
+    }@FXML
+    public void exponentRuleHandler()
+    {
+        switchPane("lessons");
+
+    }
+
     @FXML
     public void questionAnswer(ActionEvent e)
     {
@@ -241,5 +299,35 @@ public class Controller extends Main implements Initializable {
             window.setScene(newScene);
             window.show();
         }
+    }
+
+    //switchPanes
+    public void switchPane (String visiblePane){
+        Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu= false;
+        if (visiblePane.equals("logIn"))
+        {
+            logIn = true;
+        }
+        if (visiblePane.equals("lessonMenu"))
+        {
+            lessonMenu = true;
+        }
+        if (visiblePane.equals("quiz"))
+        {
+            quiz = true;
+        }
+        if (visiblePane.equals("grades"))
+        {
+            grades = true;
+        }
+        if (visiblePane.equals("lessons"))
+        {
+            lessons = true;
+        }
+        lessonPane.setVisible(lessons);
+        lessonMenuPane.setVisible(lessonMenu);
+        loginPane.setVisible(logIn);
+        quizPane.setVisible(quiz);
+        gradePane.setVisible(grades);
     }
 }

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,39 +20,10 @@
 <VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0">
-         <center>
-              <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-                  <children>
-                      <Label layoutX="274.0" layoutY="158.0" text="Username:">
-                          <font>
-                              <Font size="16.0" />
-                          </font>
-                      </Label>
-                      <Label layoutX="276.0" layoutY="225.0" text="Password:">
-                          <font>
-                              <Font size="16.0" />
-                          </font>
-                      </Label>
-                      <TextField fx:id="userNameField" layoutX="385.0" layoutY="154.0" />
-                      <Button fx:id="logInBtn" layoutX="367.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
-                          <font>
-                              <Font size="18.0" />
-                          </font>
-                      </Button>
-                      <Button layoutX="355.0" layoutY="379.0" mnemonicParsing="false" text="Create Account" />
-                      <ImageView fx:id="logoView" fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                              <Image url="@../../resources/dsdt.png" />
-                          </image>
-                      </ImageView>
-                      <PasswordField layoutX="385.0" layoutY="225.0" />
-                  </children>
-              </AnchorPane>
-         </center>
          <top>
             <AnchorPane prefHeight="40.0" prefWidth="640.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="hambergerView" fitHeight="32.0" fitWidth="43.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="hamburgerView" fitHeight="32.0" fitWidth="43.0" layoutX="4.0" layoutY="4.0" onMouseClicked="#sideMenuButtonHandler" onMousePressed="#sideMenuButtonHandler" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/hamburger.png" />
                      </image>
@@ -60,6 +37,195 @@
                </children>
             </AnchorPane>
          </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="lessonPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="560.0" prefWidth="798.0" visible="false">
+                     <children>
+                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
+                                 <children>
+                                    <ScrollPane layoutY="7.0" prefHeight="177.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+                                       <content>
+                                          <ImageView fitHeight="754.0" fitWidth="793.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Lesson1.PNG" />
+                                             </image>
+                                          </ImageView>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
+                                       <tabs>
+                                          <Tab id="L1Q1" fx:id="L1Q1" text="Question 1">
+                                             <content>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <RadioButton fx:id="Q1A" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+                                                      <RadioButton fx:id="Q1B" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+                                                      <RadioButton fx:id="Q1C" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab id="L1Q2" fx:id="L1Q2" text="Question 2">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
+                                                   <children>
+                                                      <RadioButton fx:id="Q2A" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+                                                      <RadioButton fx:id="Q2B" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+                                                      <RadioButton fx:id="Q2C" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab id="L1Q3" fx:id="L1Q3" text="Question 3">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
+                                                   <children>
+                                                      <RadioButton fx:id="Q3A" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+                                                      <RadioButton fx:id="Q3B" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+                                                      <RadioButton fx:id="Q3C" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+                                                      <Button fx:id="SubmitAll" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                    <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
+                        <children>
+                            <Label layoutX="274.0" layoutY="158.0" text="Username:">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="276.0" layoutY="225.0" text="Password:">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="userNameField" layoutX="385.0" layoutY="154.0" />
+                            <Button fx:id="logInBtn" layoutX="367.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Button>
+                            <Button layoutX="355.0" layoutY="379.0" mnemonicParsing="false" text="Create Account" />
+                            <ImageView fx:id="logoView" fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../resources/dsdt.png" />
+                                </image>
+                            </ImageView>
+                            <PasswordField layoutX="385.0" layoutY="225.0" />
+                        </children>
+                    </AnchorPane>
+                  <AnchorPane fx:id="gradePane" layoutX="10.0" layoutY="10.0" prefHeight="561.0" prefWidth="799.0" visible="false">
+                     <children>
+                        <Label layoutX="340.0" layoutY="5.0" text="Grades">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="quizPane" layoutX="-1.0" prefHeight="572.0" prefWidth="810.0" visible="false">
+                     <children>
+                        <Label layoutX="365.0" layoutY="9.0" text="Quiz">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="lessonMenuPane" prefHeight="561.0" prefWidth="799.0" visible="false">
+                     <children>
+                        <VBox layoutX="347.0" layoutY="124.0" prefHeight="260.0" prefWidth="176.0">
+                           <children>
+                              <Label onMouseClicked="#powerRuleHandler" prefHeight="59.0" prefWidth="119.0" text="Power Rule">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#productRuleHandler" prefHeight="59.0" prefWidth="136.0" text="Product Rule">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#exponentRuleHandler" prefHeight="63.0" prefWidth="153.0" text="Exponent Rule">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#chainRuleHandler" prefHeight="57.0" prefWidth="113.0" text="Chain Rule">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label layoutX="339.0" layoutY="23.0" text="Lessons">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="sideMenuPane" layoutY="-41.0" prefHeight="603.0" prefWidth="207.0" style="-fx-background-color: f4f4f4; -fx-border-color: BLACK;" visible="false">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="2.0" prefHeight="600.0" prefWidth="191.0" style="-fx-background-color: f4f4f4;">
+                           <children>
+                              <Label fx:id="closeButton" onMouseClicked="#closeButtonHandler" prefHeight="29.0" prefWidth="200.0" text="                             X">
+                                 <font>
+                                    <Font name="Roboto Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#lessonMenuHandler" prefHeight="84.0" prefWidth="153.0" text="Lessons">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#quizHandler" prefHeight="91.0" prefWidth="73.0" text="Quiz">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#gradeHandler" prefHeight="95.0" prefWidth="111.0" text="Grades">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#logoutHandler" prefHeight="85.0" prefWidth="129.0" text="Log Out">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
       </BorderPane>
     </children>
 </VBox>

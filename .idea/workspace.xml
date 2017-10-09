@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added Top Bar">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Main.class" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lesson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
@@ -17,6 +18,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CSE360REC$Main.coverage" NAME="Main Coverage Results" MODIFIED="1507526573355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sample.*</FILTER>
+    </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -67,8 +73,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="54">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#632#633#0" expanded="true" />
@@ -81,17 +87,24 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="44" column="66" lean-forward="false" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+            <state relative-caret-position="-1452">
+              <caret line="128" column="25" lean-forward="false" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
               <folding>
                 <element signature="method#loginButtonHandler#0;class#Controller#0" expanded="false" />
                 <element signature="method#nextLesson1Handler#0;class#Controller#0" expanded="false" />
                 <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
                 <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
                 <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+                <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+                <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+                <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+                <element signature="e#4005#4006#0" expanded="true" />
+                <element signature="e#4045#4046#0" expanded="true" />
+                <element signature="e#4112#4113#0" expanded="true" />
+                <element signature="e#4149#4150#0" expanded="true" />
                 <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
                 <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-                <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+                <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
                 <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
                 <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
                 <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -102,14 +115,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Lesson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lesson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            <state relative-caret-position="225">
+              <caret line="168" column="36" lean-forward="false" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -121,8 +144,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>power</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -152,13 +181,14 @@
         <option value="$PROJECT_DIR$/src/sample/NotQuite.fxml" />
         <option value="$PROJECT_DIR$/src/sample/NoBueno.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/Lesson.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
+    <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
   </component>
@@ -184,19 +214,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="LSTUTOR1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LSTUTOR1" type="462c0819:PsiDirectoryNode" />
+              <item name="CSE360REC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE360REC" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="LSTUTOR1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LSTUTOR1" type="462c0819:PsiDirectoryNode" />
+              <item name="CSE360REC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE360REC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LSTUTOR1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LSTUTOR1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -427,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507493651301</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Top Bar">
+      <created>1507497585842</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507497585842</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -435,17 +466,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18607306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23858447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -454,7 +487,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -538,7 +571,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+          <line>115</line>
+          <properties class="sample.Controller" method="closeButtonHandler">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+          <line>111</line>
+          <properties class="sample.Controller" method="sideMenuButtonHandler">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -547,39 +598,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="method#loginButtonHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#nextLesson1Handler#0;class#Controller#0" expanded="false" />
-            <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
-            <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
-            <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
-            <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
-            <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
-            <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -602,9 +620,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -658,9 +683,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -703,9 +735,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -748,9 +787,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -782,9 +828,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -827,9 +880,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -883,9 +943,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -928,9 +995,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -962,9 +1036,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -1007,9 +1088,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -1063,9 +1151,16 @@
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
@@ -1084,17 +1179,6 @@
     <entry file="file://$PROJECT_DIR$/out/production/LSTUTOR/sample/Lesson#1Power.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Lesson#1Power.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Lesson1Power.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/lesson2.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/lesson3.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1161,29 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/NotQuite.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1195,19 +1256,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/lesson2.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1139" column="0" lean-forward="false" selection-start-line="1139" selection-start-column="0" selection-end-line="1139" selection-end-column="0" />
+          <folding>
+            <element signature="e#48551#48552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="168" column="36" lean-forward="false" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="44" column="66" lean-forward="false" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+        <state relative-caret-position="-1452">
+          <caret line="128" column="25" lean-forward="false" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
           <folding>
             <element signature="method#loginButtonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson1Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson3Handler#0;class#Controller#0" expanded="false" />
             <element signature="method#nextLesson4Handler#0;class#Controller#0" expanded="false" />
+            <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+            <element signature="e#4005#4006#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
-            <element signature="method#logoutHandler#0;class#Controller#0" expanded="false" />
+            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
