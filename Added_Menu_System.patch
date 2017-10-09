@@ -1,0 +1,862 @@
+Index: src/sample/Controller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/sample/Controller.java	(revision 4bb6bd0bc208807c96b218e55463dcda44ed59bf)
++++ src/sample/Controller.java	(revision )
+@@ -49,6 +49,8 @@
+     @FXML ImageView hamburgerView = new ImageView();
+     @FXML ImageView userView = new ImageView();
+     @FXML ImageView logoView = new ImageView();
++    @FXML ImageView logoView1 = new ImageView();
++
+ 
+     Lesson lesson = new Lesson();
+ 
+@@ -60,6 +62,7 @@
+     hamburgerView.setImage(hamburger);
+     userView.setImage(userIcon);
+     logoView.setImage(logo);
++    logoView1.setImage(logo);
+     }
+     @FXML
+ 
+@@ -120,10 +123,10 @@
+     public void gradeHandler(){
+         switchPane("grades");
+ 
+-    }@FXML
++    }
++    @FXML
+     public void logoutHandler(){
+         switchPane("logIn");
+-
+     }
+     @FXML
+     public void lessonMenuHandler(){
+@@ -232,10 +235,6 @@
+                 displayReaction(0);
+         }
+     }
+-    @FXML
+-    public void logoutHandler(ActionEvent actionEvent)
+-    {
+-    }
+     @FXML
+     public void changLessonHandler(ActionEvent actionEvent)
+     {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 4bb6bd0bc208807c96b218e55463dcda44ed59bf)
++++ .idea/workspace.xml	(revision )
+@@ -2,17 +2,11 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Lesson.java" afterPath="$PROJECT_DIR$/src/sample/Lesson.java" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Controller.class" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/GreatJob.fxml" afterPath="$PROJECT_DIR$/src/sample/GreatJob.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/NoBueno.fxml" afterPath="$PROJECT_DIR$/src/sample/NoBueno.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/NoBueno2.fxml" afterPath="$PROJECT_DIR$/src/sample/NoBueno2.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/NotQuite.fxml" afterPath="$PROJECT_DIR$/src/sample/NotQuite.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/lesson1.fxml" afterPath="$PROJECT_DIR$/src/sample/lesson1.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/lesson2.fxml" afterPath="$PROJECT_DIR$/src/sample/lesson2.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/lesson3.fxml" afterPath="$PROJECT_DIR$/src/sample/lesson3.fxml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/lesson4.fxml" afterPath="$PROJECT_DIR$/src/sample/lesson4.fxml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Lesson.java" afterPath="$PROJECT_DIR$/src/sample/Lesson.java" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
+     </list>
+     <ignored path="JavaFxApplication.iws" />
+@@ -93,8 +87,8 @@
+       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="532">
+-              <caret line="332" column="20" lean-forward="false" selection-start-line="332" selection-start-column="8" selection-end-line="332" selection-end-column="20" />
++            <state relative-caret-position="150">
++              <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+               <folding>
+                 <element signature="method#nextLesson1Handler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
+@@ -103,16 +97,18 @@
+                 <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-                <element signature="e#3803#3804#0" expanded="true" />
+-                <element signature="e#3843#3844#0" expanded="true" />
++                <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++                <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++                <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++                <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+                 <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-                <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+                 <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+                 <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++                <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+               </folding>
+             </state>
+           </provider>
+@@ -121,9 +117,15 @@
+       <file leaf-file-name="Lesson.java" pinned="false" current-in-tab="false">
+         <entry file="file://$PROJECT_DIR$/src/sample/Lesson.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="100">
+-              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+-              <folding />
++            <state relative-caret-position="198">
++              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
++              <folding>
++                <element signature="imports" expanded="true" />
++                <element signature="e#354#355#0" expanded="true" />
++                <element signature="e#424#425#0" expanded="true" />
++                <element signature="e#519#520#0" expanded="true" />
++                <element signature="e#553#554#0" expanded="true" />
++              </folding>
+             </state>
+           </provider>
+         </entry>
+@@ -134,7 +136,7 @@
+             <state />
+           </provider>
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="-750">
++            <state relative-caret-position="3075">
+               <caret line="129" column="36" lean-forward="false" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+               <folding />
+             </state>
+@@ -154,6 +156,7 @@
+   <component name="FindInProjectRecents">
+     <findStrings>
+       <find>power</find>
++      <find>log</find>
+     </findStrings>
+   </component>
+   <component name="FindManager">
+@@ -185,8 +188,8 @@
+         <option value="$PROJECT_DIR$/src/sample/NoBueno.fxml" />
+         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+         <option value="$PROJECT_DIR$/src/Lesson.java" />
+-        <option value="$PROJECT_DIR$/src/sample/Lesson.java" />
+         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
++        <option value="$PROJECT_DIR$/src/sample/Lesson.java" />
+       </list>
+     </option>
+   </component>
+@@ -469,7 +472,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1507568323361</updated>
+     </task>
+-    <option name="localTasksCounter" value="11" />
++    <task id="LOCAL-00011" summary="Added Menu System">
++      <created>1507571467752</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1507571467752</updated>
++    </task>
++    <option name="localTasksCounter" value="12" />
+     <servers />
+   </component>
+   <component name="TimeTrackingManager">
+@@ -487,7 +497,7 @@
+       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23858447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23858447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+@@ -578,14 +588,15 @@
+     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+     <MESSAGE value="Changed some stuff" />
+     <MESSAGE value="Added Top Bar" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added Top Bar" />
++    <MESSAGE value="Added Menu System" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added Menu System" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-method">
+           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+-          <line>111</line>
++          <line>114</line>
+           <properties class="sample.Controller" method="closeButtonHandler">
+             <option name="EMULATED" value="true" />
+           </properties>
+@@ -593,14 +604,22 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-method">
+           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+-          <line>107</line>
++          <line>110</line>
+           <properties class="sample.Controller" method="sideMenuButtonHandler">
+             <option name="EMULATED" value="true" />
+           </properties>
+           <option name="timeStamp" value="2" />
+         </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
++          <line>127</line>
++          <properties class="sample.Controller" method="logoutHandler">
++            <option name="EMULATED" value="true" />
++          </properties>
++          <option name="timeStamp" value="3" />
++        </line-breakpoint>
+       </breakpoints>
+-      <option name="time" value="3" />
++      <option name="time" value="4" />
+     </breakpoint-manager>
+     <watches-manager />
+   </component>
+@@ -633,16 +652,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -693,16 +714,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -742,16 +765,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -791,16 +816,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -829,16 +856,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -878,16 +907,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -938,16 +969,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -987,16 +1020,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -1025,16 +1060,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -1074,16 +1111,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -1134,16 +1173,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+@@ -1267,29 +1308,35 @@
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/src/sample/Lesson.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="198">
++          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#354#355#0" expanded="true" />
++            <element signature="e#424#425#0" expanded="true" />
++            <element signature="e#519#520#0" expanded="true" />
++            <element signature="e#553#554#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+       <provider editor-type-id="JavaFX-Scene-Builder">
+         <state />
+       </provider>
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-750">
++        <state relative-caret-position="3075">
+           <caret line="129" column="36" lean-forward="false" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+           <folding />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/sample/Lesson.java">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="100">
+-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+-          <folding />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="532">
+-          <caret line="332" column="20" lean-forward="false" selection-start-line="332" selection-start-column="8" selection-end-line="332" selection-end-column="20" />
++        <state relative-caret-position="150">
++          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+           <folding>
+             <element signature="method#nextLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#nextLesson2Handler#0;class#Controller#0" expanded="false" />
+@@ -1298,16 +1345,18 @@
+             <element signature="method#sideMenuButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#closeButtonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#gradeHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="e#3803#3804#0" expanded="true" />
+-            <element signature="e#3843#3844#0" expanded="true" />
++            <element signature="method#productRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#powerRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#chainRuleHandler#0;class#Controller#0" expanded="false" />
++            <element signature="method#exponentRuleHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#questionAnswer#0;class#Controller#0" expanded="false" />
+             <element signature="method#submitAllHandler#0;class#Controller#0" expanded="false" />
+-            <element signature="method#logoutHandler#1;class#Controller#0" expanded="false" />
+             <element signature="method#changLessonHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#changeAssignmentHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#squizzesHandler#0;class#Controller#0" expanded="false" />
+             <element signature="method#newLesson1Handler#0;class#Controller#0" expanded="false" />
+             <element signature="method#displayReaction#0;class#Controller#0" expanded="false" />
++            <element signature="method#switchPane#0;class#Controller#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+Index: src/sample/Lesson.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/sample/Lesson.java	(revision 4bb6bd0bc208807c96b218e55463dcda44ed59bf)
++++ src/sample/Lesson.java	(revision )
+@@ -1,12 +1,26 @@
+ package sample;
+ 
++import javafx.scene.image.Image;
++import javafx.scene.image.ImageView;
++
++import java.awt.*;
++
+ public class Lesson {
++    Image lesson1 = new Image("/resources/Lesson1.png");
++    Image lesson2 = new Image("");
++    Image lesson3 = new Image("");
++    Image lesson4 = new Image("");
++    ImageView lessonImage;
+ 
+     public void Lesson(int number){
+-
++        ImageView lessonImage = new ImageView("lesson"+number);
+     }
+     public void setLesson(int number)
+     {
+ 
++    }
++    public ImageView getLessonImage()
++    {
++        return lessonImage;
+     }
+ }
+Index: out/production/LSTUTOR/sample/sample.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/production/LSTUTOR/sample/sample.fxml	(revision 4bb6bd0bc208807c96b218e55463dcda44ed59bf)
++++ out/production/LSTUTOR/sample/sample.fxml	(revision )
+@@ -40,76 +40,37 @@
+          <center>
+             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <children>
+-                  <AnchorPane fx:id="lessonPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="560.0" prefWidth="798.0" visible="false">
++                  <AnchorPane fx:id="mainMenuPane" layoutX="-1.0" layoutY="-1.0" prefHeight="571.0" prefWidth="809.0">
+                      <children>
+-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+-                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
+-                           <font>
+-                              <Font name="System Bold" size="17.0" />
+-                           </font>
+-                        </Label>
+-                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+-                           <items>
+-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
+-                                 <children>
+-                                    <ScrollPane layoutY="7.0" prefHeight="177.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+-                                       <content>
+-                                          <ImageView fitHeight="754.0" fitWidth="793.0" pickOnBounds="true" preserveRatio="true">
+-                                             <image>
+-                                                <Image url="@Lesson1.PNG" />
+-                                             </image>
+-                                          </ImageView>
+-                                       </content>
+-                                    </ScrollPane>
+-                                 </children>
+-                                 <padding>
+-                                    <Insets top="2.0" />
+-                                 </padding>
+-                              </AnchorPane>
+-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+-                                 <children>
+-                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
+-                                       <tabs>
+-                                          <Tab id="L1Q1" fx:id="L1Q1" text="Question 1">
+-                                             <content>
+-                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+-                                                   <children>
+-                                                      <RadioButton fx:id="Q1A" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+-                                                      <RadioButton fx:id="Q1B" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+-                                                      <RadioButton fx:id="Q1C" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+-                                                   </children>
+-                                                </AnchorPane>
+-                                             </content>
+-                                          </Tab>
+-                                          <Tab id="L1Q2" fx:id="L1Q2" text="Question 2">
+-                                             <content>
+-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
+-                                                   <children>
+-                                                      <RadioButton fx:id="Q2A" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+-                                                      <RadioButton fx:id="Q2B" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+-                                                      <RadioButton fx:id="Q2C" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+-                                                   </children>
+-                                                </AnchorPane>
+-                                             </content>
+-                                          </Tab>
+-                                          <Tab id="L1Q3" fx:id="L1Q3" text="Question 3">
+-                                             <content>
+-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
+-                                                   <children>
+-                                                      <RadioButton fx:id="Q3A" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
+-                                                      <RadioButton fx:id="Q3B" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
+-                                                      <RadioButton fx:id="Q3C" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
+-                                                      <Button fx:id="SubmitAll" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
+-                                                   </children>
+-                                                </AnchorPane>
+-                                             </content>
+-                                          </Tab>
+-                                       </tabs>
+-                                    </TabPane>
+-                                 </children>
+-                              </AnchorPane>
+-                           </items>
+-                        </SplitPane>
++                        <ImageView fx:id="logoView1" fitHeight="138.0" fitWidth="119.0" layoutX="348.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
++                           <image>
++                              <Image url="@resources/dsdt.png" />
++                           </image>
++                        </ImageView>
++                        <VBox alignment="TOP_CENTER" layoutX="276.0" layoutY="147.0" prefHeight="385.0" prefWidth="270.0" style="-fx-background-color: f4f4f4;">
++                           <children>
++                              <Label onMouseClicked="#lessonMenuHandler" prefHeight="84.0" prefWidth="153.0" text="  Lessons">
++                                 <font>
++                                    <Font size="36.0" />
++                                 </font>
++                              </Label>
++                              <Label onMouseClicked="#quizHandler" prefHeight="91.0" prefWidth="73.0" text="Quiz">
++                                 <font>
++                                    <Font size="36.0" />
++                                 </font>
++                              </Label>
++                              <Label onMouseClicked="#gradeHandler" prefHeight="95.0" prefWidth="111.0" text="Grades">
++                                 <font>
++                                    <Font size="36.0" />
++                                 </font>
++                              </Label>
++                              <Label onMouseClicked="#logoutHandler" prefHeight="85.0" prefWidth="129.0" text="Log Out">
++                                 <font>
++                                    <Font size="36.0" />
++                                 </font>
++                              </Label>
++                           </children>
++                        </VBox>
+                      </children>
+                   </AnchorPane>
+                     <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
+@@ -188,6 +149,78 @@
+                               <Font size="36.0" />
+                            </font>
+                         </Label>
++                     </children>
++                  </AnchorPane>
++                  <AnchorPane fx:id="lessonPane" layoutX="10.0" layoutY="10.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="560.0" prefWidth="798.0" visible="false">
++                     <children>
++                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next sample.Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
++                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="sample.Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
++                           <font>
++                              <Font name="System Bold" size="17.0" />
++                           </font>
++                        </Label>
++                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
++                           <items>
++                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
++                                 <children>
++                                    <ScrollPane layoutY="7.0" prefHeight="177.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
++                                       <content>
++                                          <ImageView fitHeight="754.0" fitWidth="793.0" pickOnBounds="true" preserveRatio="true">
++                                             <image>
++                                                <Image url="@Lesson1.PNG" />
++                                             </image>
++                                          </ImageView>
++                                       </content>
++                                    </ScrollPane>
++                                 </children>
++                                 <padding>
++                                    <Insets top="2.0" />
++                                 </padding>
++                              </AnchorPane>
++                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
++                                 <children>
++                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
++                                       <tabs>
++                                          <Tab id="L1Q1" fx:id="L1Q11" text="Question 1">
++                                             <content>
++                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
++                                                   <children>
++                                                      <RadioButton fx:id="Q1A1" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
++                                                      <RadioButton fx:id="Q1B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
++                                                      <RadioButton fx:id="Q1C1" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
++                                                   </children>
++                                                </AnchorPane>
++                                             </content>
++                                          </Tab>
++                                          <Tab id="L1Q2" fx:id="L1Q21" text="Question 2">
++                                             <content>
++                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
++                                                   <children>
++                                                      <RadioButton fx:id="Q2A1" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
++                                                      <RadioButton fx:id="Q2B1" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
++                                                      <RadioButton fx:id="Q2C1" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
++                                                   </children>
++                                                </AnchorPane>
++                                             </content>
++                                          </Tab>
++                                          <Tab id="L1Q3" fx:id="L1Q31" text="Question 3">
++                                             <content>
++                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
++                                                   <children>
++                                                      <RadioButton fx:id="Q3A1" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
++                                                      <RadioButton fx:id="Q3B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
++                                                      <RadioButton fx:id="Q3C1" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
++                                                      <Button fx:id="SubmitAll1" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
++                                                   </children>
++                                                </AnchorPane>
++                                             </content>
++                                          </Tab>
++                                       </tabs>
++                                    </TabPane>
++                                 </children>
++                              </AnchorPane>
++                           </items>
++                        </SplitPane>
+                      </children>
+                   </AnchorPane>
+                   <AnchorPane fx:id="sideMenuPane" layoutY="-41.0" prefHeight="603.0" prefWidth="207.0" style="-fx-background-color: f4f4f4; -fx-border-color: BLACK;" visible="false">
+Index: src/sample/sample.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/sample/sample.fxml	(revision 4bb6bd0bc208807c96b218e55463dcda44ed59bf)
++++ src/sample/sample.fxml	(revision )
+@@ -40,11 +40,11 @@
+          <center>
+             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <children>
+-                  <AnchorPane fx:id="mainMenuPane" layoutX="-1.0" layoutY="-1.0" prefHeight="571.0" prefWidth="809.0" visible="false">
++                  <AnchorPane fx:id="mainMenuPane" layoutX="-1.0" layoutY="-1.0" prefHeight="571.0" prefWidth="809.0">
+                      <children>
+                         <ImageView fx:id="logoView1" fitHeight="138.0" fitWidth="119.0" layoutX="348.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+-                              <Image url="@../../resources/dsdt.png" />
++                              <Image url="@resources/dsdt.png" />
+                            </image>
+                         </ImageView>
+                         <VBox alignment="TOP_CENTER" layoutX="276.0" layoutY="147.0" prefHeight="385.0" prefWidth="270.0" style="-fx-background-color: f4f4f4;">
+@@ -73,7 +73,7 @@
+                         </VBox>
+                      </children>
+                   </AnchorPane>
+-                    <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0">
++                    <AnchorPane fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
+                         <children>
+                             <Label layoutX="274.0" layoutY="158.0" text="Username:">
+                                 <font>
+diff --git out/production/LSTUTOR/sample/Controller.class out/production/LSTUTOR/sample/Controller.class
+index d48c5b2d709202f2a6a7e86160d299dcf8ea8889..55a7254c482834213651bbdec21fbee3579125af
+GIT binary patch
+literal 8289
+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
+
