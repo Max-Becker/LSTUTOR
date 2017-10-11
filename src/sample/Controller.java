@@ -65,7 +65,7 @@ public class Controller extends Main implements Initializable {
     ImageView logoView = new ImageView();
     @FXML
     ImageView logoView1 = new ImageView();
-
+    @FXML Label userNameLabel = new Label();
 
 
     Lesson lesson = new Lesson(0);
@@ -114,6 +114,7 @@ public class Controller extends Main implements Initializable {
                 {
                     if (temp.password.equals(passInput)) {
                         truelogin = true;
+                        userNameLabel.setText(temp.userName);
                         switchPane("mainMenu");
                     }
                     else
@@ -155,32 +156,6 @@ public class Controller extends Main implements Initializable {
         linkedlist.printUsers();
     }
 
-    @FXML
-    public void nextLesson1Handler(ActionEvent event)
-    {
-        switchPane("lessonPane2");
-        lessonPane2.setVisible(true);
-        lessonPane.setVisible(false);
-    }
-
-    public void nextLesson2Handler(ActionEvent event)
-    {
-        switchPane("lessonPane3");
-        lessonPane3.setVisible(true);
-        lessonPane2.setVisible(false);
-    }
-
-    public void nextLesson3Handler(ActionEvent event) {
-        switchPane("lessonPane4");
-        lessonPane4.setVisible(true);
-        lessonPane3.setVisible(false);
-    }
-
-    public void nextLesson4Handler(ActionEvent event)  {
-        switchPane("mainMenu");
-        mainMenuPane.setVisible(true);
-        lessonPane4.setVisible(false);
-    }
 
     //Side Menu
     @FXML
@@ -236,6 +211,10 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void exponentRuleHandler() {
         switchPane("lessons");
+
+    }
+    @FXML
+    public void nextLesson(){
 
     }
 
@@ -296,25 +275,7 @@ public class Controller extends Main implements Initializable {
     }
 
     @FXML
-    public void changLessonHandler(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void changeAssignmentHandler(ActionEvent actionEvent) {
-    }
-
-    @FXML
     public void squizzesHandler(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void newLesson1Handler(ActionEvent event) throws Exception {
-        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("lesson1.fxml"));
-        Scene newScene = new Scene(newSceneRoot);
-
-        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-        window.setScene(newScene);
-        window.show();
     }
 
     public void displayReaction(int correct) throws Exception {

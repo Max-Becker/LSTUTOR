@@ -33,7 +33,7 @@
                         <Image url="@../resources/usericon.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="688.0" layoutY="11.0" text="User" />
+                  <Label fx:id="userNameLabel" layoutX="688.0" layoutY="11.0" text="User" />
                </children>
             </AnchorPane>
          </top>
@@ -151,9 +151,9 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0" visible="false">
+                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
                      <children>
-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
                            <font>
                               <Font name="System Bold" size="17.0" />
@@ -254,206 +254,6 @@
                               </Label>
                            </children>
                         </VBox>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane id="Lesson2" fx:id="lessonPane2" layoutY="-6.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="595.0" prefWidth="829.0" visible="false">
-                     <children>
-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson2Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="193.0" text="Lesson #2: Product Rule" AnchorPane.topAnchor="-3.0">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
-                           <items>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
-                                 <children>
-                                    <ScrollPane layoutX="-2.0" layoutY="1.0" prefHeight="284.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
-                                       <content>
-                                          <ImageView fitHeight="471.0" fitWidth="833.0" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/lesson2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </content>
-                                    </ScrollPane>
-                                 </children>
-                                 <padding>
-                                    <Insets top="2.0" />
-                                 </padding>
-                              </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
-                                       <tabs>
-                                          <Tab id="L1Q1" fx:id="L1Q111" text="Question 1">
-                                             <content>
-                                                <AnchorPane prefHeight="240.0" prefWidth="802.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q1A11" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q1B11" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q1C11" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q2" fx:id="L1Q211" text="Question 2">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q2A11" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q2B11" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q2C11" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q3" fx:id="L1Q311" text="Question 3">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q3A11" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q3B11" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q3C11" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <Button fx:id="SubmitAll11" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                       </tabs>
-                                    </TabPane>
-                                 </children>
-                              </AnchorPane>
-                           </items>
-                        </SplitPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane id="Lesson3" fx:id="lessonPane3" layoutX="-1.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="599.0" prefWidth="839.0" visible="false">
-                     <children>
-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson3Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="206.0" text="Lesson #3: Quotient Rule" AnchorPane.topAnchor="-3.0">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
-                           <items>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
-                                 <children>
-                                    <ScrollPane layoutY="7.0" prefHeight="177.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0" />
-                                 </children>
-                                 <padding>
-                                    <Insets top="2.0" />
-                                 </padding>
-                              </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
-                                       <tabs>
-                                          <Tab id="L1Q1" fx:id="L1Q1111" text="Question 1">
-                                             <content>
-                                                <AnchorPane prefHeight="240.0" prefWidth="802.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q1A111" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q1B111" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q1C111" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q2" fx:id="L1Q2111" text="Question 2">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q2A111" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q2B111" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q2C111" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q3" fx:id="L1Q3111" text="Question 3">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q3A111" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q3B111" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q3C111" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <Button fx:id="SubmitAll111" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                       </tabs>
-                                    </TabPane>
-                                 </children>
-                              </AnchorPane>
-                           </items>
-                        </SplitPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane id="Lesson4" fx:id="lessonPane4" layoutY="-1.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="601.0" prefWidth="839.0" visible="false">
-                     <children>
-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson4Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label id="Lesson4"  layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="206.0" text="Lesson #4: Chain Rule" AnchorPane.topAnchor="-3.0">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
-                           <items>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
-                                 <children>
-                                    <ScrollPane layoutY="7.0" prefHeight="177.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0" />
-                                 </children>
-                                 <padding>
-                                    <Insets top="2.0" />
-                                 </padding>
-                              </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
-                                       <tabs>
-                                          <Tab id="L1Q1" fx:id="L1Q11111" text="Question 1">
-                                             <content>
-                                                <AnchorPane prefHeight="240.0" prefWidth="802.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q1A1111" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q1B1111" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q1C1111" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q2" fx:id="L1Q21111" text="Question 2">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q2A1111" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q2B1111" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q2C1111" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                          <Tab id="L1Q3" fx:id="L1Q31111" text="Question 3">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
-                                                   <children>
-                                                      <RadioButton fx:id="Q3A1111" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q3B1111" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q3C1111" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <Button fx:id="SubmitAll1111" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </content>
-                                          </Tab>
-                                       </tabs>
-                                    </TabPane>
-                                 </children>
-                              </AnchorPane>
-                           </items>
-                        </SplitPane>
                      </children>
                   </AnchorPane>
                </children>
