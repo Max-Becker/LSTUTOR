@@ -36,11 +36,6 @@ public class Lesson {
 
     }
 
-    public ImageView getLessonImage()
-    {
-
-    }
-
     public Image getLessonImage()
     {
         return lessonImage;
