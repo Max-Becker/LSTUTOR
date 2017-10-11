@@ -10,10 +10,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <Button layoutX="245.0" layoutY="311.0" mnemonicParsing="false" onAction="#newLesson1Handler" text="Next Lesson" />
+        <Button layoutX="245.0" layoutY="311.0" mnemonicParsing="false" onAction="#newLesson1Handler" text="Next sample.Lesson" />
         <ImageView fitHeight="166.0" fitWidth="185.0" layoutX="202.0" layoutY="32.0" preserveRatio="true">
             <image>
-                <Image url="@HappyIcon.png" />
+                <Image url="@../resources/HappyIcon.png" />
             </image>
         </ImageView>
         <Text layoutX="42.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3/3 Great Job!" wrappingWidth="513.02392578125">

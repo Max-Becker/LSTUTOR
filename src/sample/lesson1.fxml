@@ -20,16 +20,16 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="178.0" prefWidth="326.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson1Handler" text="Next sample.Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <MenuButton id="sidemenu" layoutX="1.0" layoutY="1.0" mnemonicParsing="false" text="Side Menu" textFill="#2309d9" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
               <items>
                   <MenuItem id="sidequizzes" mnemonicParsing="false" onAction="#squizzesHandler" text="Quizzes" />
                 <MenuItem id="sidechangeAssignment" mnemonicParsing="false" onAction="#changeAssignmentHandler" text="Change Assignment" />
-                <MenuItem id="sideChangeLesson" mnemonicParsing="false" onAction="#changLessonHandler" text="Change Lesson" />
+                <MenuItem id="sideChangeLesson" mnemonicParsing="false" onAction="#changLessonHandler" text="Change sample.Lesson" />
                   <MenuItem id="sideLogout" mnemonicParsing="false" onAction="#logoutHandler" text="Logout" />
               </items>
             </MenuButton>
-            <Label layoutX="230.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
+            <Label layoutX="230.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="sample.Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
                <font>
                   <Font name="System Bold Italic" size="17.0" />
                </font>
@@ -42,7 +42,7 @@
                            <content>
                               <ImageView fitHeight="605.0" fitWidth="622.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@Lesson1.PNG" />
+                                    <Image url="@../resources/Lesson1.PNG" />
                                  </image></ImageView>
                            </content>
                         </ScrollPane>
