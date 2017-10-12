@@ -31,7 +31,7 @@ public class Controller extends Main implements Initializable {
     @FXML ImageView question1 = new ImageView();
     @FXML ImageView question2 = new ImageView();
     @FXML ImageView question3 = new ImageView();
-    @FXML Label lessonTitle = new Label();
+    @FXML Label lessonTitle, labelLesson,labelLesson1,labelLesson2,labelLesson3,quizGradeLabel,totalGrade = new Label();
     @FXML Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane = new Pane();
 
     private  String userInput = null;
@@ -43,7 +43,7 @@ public class Controller extends Main implements Initializable {
     int lessonState = 0;
     char[] answers = new char[3];
     char[] userAnswers = new char[3];
-    private int grade1, grade2, grade3, grade4, gradeQuiz;
+    private int grade1 = 0, grade2 = 0, grade3 = 0, grade4 = 0, gradeQuiz = 0;
     Image hamburger = new Image("/resources/hamburger.png");
     Image userIcon = new Image("/resources/usericon.png");
     Image logo = new Image("/resources/dsdt.png");
@@ -145,7 +145,15 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void gradeHandler() {
         switchPane("grades");
+        labelLesson.setText(Integer.toString(grade1));
+        labelLesson1.setText(Integer.toString(grade2));
+        String grade3String = Integer.toString(grade3);
 
+        labelLesson2.setText(Integer.toString(grade3));
+        String grade4String = Integer.toString(grade4);
+        labelLesson3.setText(grade4String);
+        quizGradeLabel.setText(Integer.toString(gradeQuiz));
+        totalGrade.setText(Double.toString((grade1+grade2+grade3+grade4)/4*.5+gradeQuiz*.5));
     }
 
     @FXML
@@ -260,7 +268,7 @@ public class Controller extends Main implements Initializable {
             }
         }
         grade3 = count;
-        displayReaction(grade3);
+        //displayReaction(grade3);
     }
 
     @FXML

@@ -27,9 +27,9 @@ public class Lesson {
     char q2a;
     char q2b;
     char q2c;
-    char q3a;
-    char q3b;
-    char q3c;
+    char q3a = 'c';
+    char q3b = 'a';
+    char q3c = 'c';
     char q4a;
     char q4b;
     char q4c;
@@ -50,7 +50,7 @@ public class Lesson {
 //                question3 = question13;
                 answer1 = q1a;
                 answer2 = q1b;
-                answer3 = q1b;
+                answer3 = q1c;
                 break;
             case 2:
                 lessonImage = lesson2;
@@ -59,7 +59,7 @@ public class Lesson {
 //                question3 = question23;
                 answer1 = q2a;
                 answer2 = q2b;
-                answer3 = q2b;
+                answer3 = q2c;
                 break;
             case 3:
                 lessonImage = lesson3;
@@ -68,7 +68,7 @@ public class Lesson {
                 question3 = question33;
                 answer1 = q3a;
                 answer2 = q3b;
-                answer3 = q3b;
+                answer3 = q3c;
                 break;
             case 4:
                 lessonImage = lesson4;
@@ -77,7 +77,7 @@ public class Lesson {
 //                question3 = question43;
                 answer1 = q4a;
                 answer2 = q4b;
-                answer3 = q4b;
+                answer3 = q4c;
                 break;
         }
     }
