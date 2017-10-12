@@ -47,6 +47,7 @@ public class Controller extends Main implements Initializable {
     Image hamburger = new Image("/resources/hamburger.png");
     Image userIcon = new Image("/resources/usericon.png");
     Image logo = new Image("/resources/dsdt.png");
+    private char UserInput[];
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -286,6 +287,12 @@ public class Controller extends Main implements Initializable {
         answers = lesson4.getAnswers();
         lessonTitle.setText("Exponential Rule");
     }
+
+    //@FXML
+    //public void nextQuizQuestion()
+    //{
+       // if()
+    //}
 
     @FXML public void exponentRuleSubmit() throws Exception {
         int count = 0;
