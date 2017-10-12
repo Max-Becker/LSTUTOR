@@ -15,7 +15,6 @@ import javax.swing.*;
 //import java.awt.;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.LinkedList;
 
 
 public class Controller extends Main implements Initializable {
@@ -83,7 +82,9 @@ public class Controller extends Main implements Initializable {
     Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane ,lessonPane2,lessonPane3, lessonPane4= new Pane();
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources)
+    {
+
         hamburgerView.setImage(hamburger);
         userView.setImage(userIcon);
         logoView.setImage(logo);
