@@ -3,12 +3,12 @@ package sample;
 import java.io.*;
 import java.lang.*;
 
-public class ReadandWrite
+public class ReadandWrite extends UserList
 {
-    private static String FILE = "/resources/DATA.txt";
+    private static File newFile = new File("/resources/DATA.txt");
     private String username, password;
-    private int usergrade;
-    String[] Data;
+    private static int usergrade;
+    static UserList linkedList = new UserList();
 
     public static  void writeToFile(String user, String pass, int grade)
     {
@@ -17,7 +17,7 @@ public class ReadandWrite
         try
         {
 
-            fw = new FileWriter(FILE);
+            fw = new FileWriter(newFile);
             bw = new BufferedWriter((fw));
             bw.write(user+"/"+pass+"/"+grade);
         }
@@ -32,14 +32,16 @@ public class ReadandWrite
         FileReader fr = null;
         try
         {
-            fr = new FileReader(FILE);
+            fr = new FileReader(newFile);
             br = new BufferedReader(fr);
 
             String line;
 
             while((line = br.readLine()) != null);
             {
-
+                String[] seperate = line.split("/");
+                usergrade = Integer.parseInt(seperate[2]);
+                linkedList.add(seperate[0],seperate[1],usergrade);
             }
         }
         catch (IOException e)

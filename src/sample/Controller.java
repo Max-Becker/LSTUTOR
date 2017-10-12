@@ -52,7 +52,7 @@ public class Controller extends Main implements Initializable {
 
 
 
-
+    private int grade;
     Image hamburger = new Image("/resources/hamburger.png");
     Image userIcon = new Image("/resources/usericon.png");
     Image logo = new Image("/resources/dsdt.png");
@@ -75,6 +75,7 @@ public class Controller extends Main implements Initializable {
     private String passInput = null;
     private Boolean truelogin = false;
     UserList linkedlist = new sample.UserList();
+    ReadandWrite getData = new ReadandWrite();
     JFrame frame = new JFrame();
     int lessonState = 0;
     char[] answers;
@@ -87,7 +88,7 @@ public class Controller extends Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-
+        getData.readfromFile();
         hamburgerView.setImage(hamburger);
         userView.setImage(userIcon);
         logoView.setImage(logo);
@@ -153,12 +154,13 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        linkedlist.add(userInput, passInput);
+        linkedlist.add(userInput, passInput, grade);
         Alert alert = new Alert((Alert.AlertType.CONFIRMATION));
         alert.setTitle("Confirmed");
         alert.setHeaderText("Account Created");
         alert.showAndWait();
         linkedlist.printUsers();
+        getData.writeToFile(userInput, passInput,grade);
     }
 
 
