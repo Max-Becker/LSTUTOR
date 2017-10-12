@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 public class Controller extends Main implements Initializable {
 
+    @FXML private ImageView Qreaction = new ImageView();
     @FXML private Button SubmitAll;
     @FXML private TextField UsernameField;
     @FXML private PasswordField passfield;
@@ -47,6 +48,9 @@ public class Controller extends Main implements Initializable {
     Image hamburger = new Image("/resources/hamburger.png");
     Image userIcon = new Image("/resources/usericon.png");
     Image logo = new Image("/resources/dsdt.png");
+    Image worry = new Image("/sample/WorryIcon.png");
+    Image sorry = new Image("/sample/SorryIcon.png");
+    Image happy = new Image("/resources/HappyIcon.png");
     private char UserInput[];
 
     @Override
@@ -185,18 +189,66 @@ public class Controller extends Main implements Initializable {
         if (currentLesson .equals("Product Rule"))
         {
             productRuleSubmit();
+            if(grade1 == 1|| grade1==0)
+            {
+                Qreaction.setImage(worry);
+            }
+            else if(grade1 == 2)
+            {
+                Qreaction.setImage(sorry);
+            }
+            else if(grade1 == 3)
+            {
+                Qreaction.setImage(happy);
+            }
         }
         if (currentLesson .equals("Power Rule"))
         {
             powerRuleSubmit();
+            if(grade2 == 1|| grade2==0)
+            {
+                Qreaction.setImage(worry);
+            }
+            else if(grade2 == 2)
+            {
+                Qreaction.setImage(sorry);
+            }
+            else if(grade2 == 3)
+            {
+                Qreaction.setImage(happy);
+            }
         }
         if (currentLesson .equals("Chain Rule"))
         {
             chainRuleSubmit();
+            if(grade3 == 1|| grade3==0)
+            {
+                Qreaction.setImage(worry);
+            }
+            else if(grade3 == 2)
+            {
+                Qreaction.setImage(sorry);
+            }
+            else if(grade3 == 3)
+            {
+                Qreaction.setImage(happy);
+            }
         }
         if (currentLesson .equals("Exponential Rule"))
         {
             exponentRuleSubmit();
+            if(grade4 == 1|| grade4==0)
+            {
+                Qreaction.setImage(worry);
+            }
+            else if(grade4 == 2)
+            {
+                Qreaction.setImage(sorry);
+            }
+            else if(grade4 == 3)
+            {
+                Qreaction.setImage(happy);
+            }
         }
     }
     @FXML

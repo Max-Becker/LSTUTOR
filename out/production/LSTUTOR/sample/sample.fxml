@@ -191,18 +191,13 @@
                         </GridPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Quizzes" fx:id="quizPane" layoutY="7.0" prefHeight="602.0" prefWidth="838.0">
+                  <AnchorPane id="Quizzes" fx:id="quizPane" layoutX="-1.0" prefHeight="572.0" prefWidth="810.0" visible="false">
                      <children>
-                        <Label layoutX="365.0" layoutY="9.0" prefHeight="65.0" prefWidth="73.0" text="Quiz">
+                        <Label layoutX="365.0" layoutY="9.0" text="Quiz">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="question11" fitHeight="367.0" fitWidth="397.0" layoutX="390.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
-                        <RadioButton fx:id="Q1B11" layoutX="176.0" layoutY="280.0" mnemonicParsing="false" onAction="#Q1B" text="B" />
-                        <RadioButton fx:id="Q1C11" layoutX="176.0" layoutY="318.0" mnemonicParsing="false" onAction="#Q1C" text="C" />
-                        <RadioButton fx:id="Q1A11" layoutX="175.0" layoutY="237.0" mnemonicParsing="false" onAction="#Q1A" prefHeight="14.0" prefWidth="32.0" text="A" />
-                        <Button fx:id="nextQuizQuestion" layoutX="383.0" layoutY="451.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Next Question" />
                      </children>
                   </AnchorPane>
                   <AnchorPane id="Lessons Menu" fx:id="lessonMenuPane" prefHeight="561.0" prefWidth="799.0" visible="false">
@@ -238,7 +233,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0" visible="false">
+                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
                      <children>
                         <Button layoutX="714.0" layoutY="-1.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="35.33333333333337" AnchorPane.topAnchor="-1.0" />
                         <Label fx:id="lessonTitle" layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
@@ -260,15 +255,15 @@
                                     <Insets top="2.0" />
                                  </padding>
                               </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" visible="false">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
                                     <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
                                        <tabs>
                                           <Tab id="L1Q1" fx:id="L1Q11" text="Question 1">
                                              <content>
-                                                <AnchorPane prefHeight="267.0" prefWidth="843.0">
+                                                <AnchorPane prefHeight="240.0" prefWidth="802.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q1A1" layoutX="14.0" layoutY="45.0" mnemonicParsing="false" onAction="#Q1A" text="A" />
+                                                      <RadioButton fx:id="Q1A1" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#Q1A" text="A" />
                                                       <RadioButton fx:id="Q1B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#Q1B" text="B" />
                                                       <RadioButton fx:id="Q1C1" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#Q1C" text="C" />
                                                       <ImageView fx:id="question1" fitHeight="174.0" fitWidth="296.0" layoutX="418.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
@@ -297,6 +292,7 @@
                                                       <RadioButton fx:id="Q3C1" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#Q3C" text="C" />
                                                       <Button fx:id="SubmitAll1" layoutX="192.0" layoutY="197.0" mnemonicParsing="false" onAction="#submitButtonHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
                                                       <ImageView fx:id="question3" fitHeight="194.0" fitWidth="297.0" layoutX="427.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <ImageView fx:id="Qreaction" fitHeight="100.0" fitWidth="144.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" />
                                                    </children>
                                                 </AnchorPane>
                                              </content>
