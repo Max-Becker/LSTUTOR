@@ -66,15 +66,16 @@ public class Controller extends Main implements Initializable {
     @FXML
     ImageView logoView1 = new ImageView();
     @FXML Label userNameLabel = new Label();
+    @FXML ImageView lessonImage = new ImageView();
 
 
-    Lesson lesson = new Lesson(0);
 
     private  String userInput = null;
     private String passInput = null;
     private Boolean truelogin = false;
     UserList linkedlist = new sample.UserList();
     JFrame frame = new JFrame();
+    int lessonState = 0;
 
 
 
@@ -193,29 +194,44 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void productRuleHandler() {
         switchPane("lessons");
-        lesson.setLesson(0);
+        Lesson lesson2 = new Lesson(2);
+        lessonImage.setImage(lesson2.getLessonImage());
+        lessonState = 2;
     }
 
     @FXML
     public void powerRuleHandler() {
         switchPane("lessons");
-
+        Lesson lesson1 = new Lesson(1);
+        lessonImage.setImage(lesson1.getLessonImage());
+        lessonState = 1;
     }
 
     @FXML
     public void chainRuleHandler() {
         switchPane("lessons");
-
+        lessonState = 3;
     }
 
     @FXML
     public void exponentRuleHandler() {
         switchPane("lessons");
-
+        lessonState = 4;
     }
     @FXML
     public void nextLesson(){
+    switch(lessonState)
+    {
+        case 1: productRuleHandler();
+            break;
+        case 2: chainRuleHandler();
+            break;
+        case 3: exponentRuleHandler();
+            break;
+        case 4: switchPane("mainMenu");
+            break;
 
+    }
     }
 
     @FXML
@@ -275,7 +291,7 @@ public class Controller extends Main implements Initializable {
     }
 
     @FXML
-    public void squizzesHandler(ActionEvent actionEvent) {
+    public void quizzesHandler(ActionEvent actionEvent) {
     }
 
     public void displayReaction(int correct) throws Exception {
@@ -315,6 +331,8 @@ public class Controller extends Main implements Initializable {
         Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false;
         if (visiblePane.equals("logIn")) {
             logIn = true;
+            hamburgerView.setDisable(true);
+
         }
         if (visiblePane.equals("lessonMenu")) {
             lessonMenu = true;
@@ -330,6 +348,7 @@ public class Controller extends Main implements Initializable {
         }
         if (visiblePane.equals("mainMenu")) {
             mainMenu = true;
+            hamburgerView.setDisable(false);
         }
         lessonPane.setVisible(lessons);
         lessonMenuPane.setVisible(lessonMenu);

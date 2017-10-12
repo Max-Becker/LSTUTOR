@@ -8,7 +8,7 @@ import java.awt.*;
 public class Lesson {
 
     private Image lesson1 = new Image("/resources/Lesson1.png");
-//    Image lesson2 = new Image("");
+    Image lesson2 = new Image("/resources/lesson2.png");
   //  Image lesson3 = new Image("");
     //Image lesson4 = new Image("");
     Image lessonImage;
@@ -19,10 +19,10 @@ public class Lesson {
         switch (number) {
             case 1:
                 lessonImage = lesson1;
-
-//            case 2:
-//                lessonImage = lesson2;
-//                break;
+                break;
+            case 2:
+                lessonImage = lesson2;
+                break;
 //            case 3:
 //                lessonImage = lesson3;
 //                break;
