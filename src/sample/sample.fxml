@@ -191,7 +191,7 @@
                         </GridPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Quizzes" fx:id="quizPane" layoutY="7.0" prefHeight="602.0" prefWidth="838.0">
+                  <AnchorPane id="Quizzes" fx:id="quizPane" layoutY="7.0" prefHeight="602.0" prefWidth="838.0" visible="false">
                      <children>
                         <Label layoutX="365.0" layoutY="9.0" prefHeight="65.0" prefWidth="73.0" text="Quiz">
                            <font>
@@ -238,7 +238,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0" visible="false">
+                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
                      <children>
                         <Button layoutX="714.0" layoutY="-1.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="35.33333333333337" AnchorPane.topAnchor="-1.0" />
                         <Label fx:id="lessonTitle" layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
@@ -260,7 +260,7 @@
                                     <Insets top="2.0" />
                                  </padding>
                               </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" visible="false">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
                                     <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
                                        <tabs>
