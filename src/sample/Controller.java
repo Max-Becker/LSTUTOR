@@ -19,76 +19,39 @@ import java.util.ResourceBundle;
 
 public class Controller extends Main implements Initializable {
 
-
-    //private javafx.scene.control.TextField UsernameField;
-    @FXML
-    private RadioButton  Q1A;
-    @FXML
-    private RadioButton  Q1B;
-    @FXML
-    private RadioButton  Q1C;
-    @FXML
-    private RadioButton  Q2A;
-    @FXML
-    private RadioButton  Q2B;
-    @FXML
-    private RadioButton  Q2C;
-    @FXML
-    private RadioButton  Q3A;
-    @FXML
-    private RadioButton  Q3B;
-    @FXML
-    private RadioButton  Q3C;
-
-    private int answered = 0;
-    @FXML
-    private Button SubmitAll;
-    @FXML
-    private TextField UsernameField;
-    @FXML
-    private PasswordField passfield;
-
-
-
-
-
-    private int grade;
-    Image hamburger = new Image("/resources/hamburger.png");
-    Image userIcon = new Image("/resources/usericon.png");
-    Image logo = new Image("/resources/dsdt.png");
-    @FXML
-    ImageView hamburgerView = new ImageView();
-    @FXML
-    ImageView userView = new ImageView();
-    @FXML
-    ImageView logoView = new ImageView();
-    @FXML
-    ImageView logoView1 = new ImageView();
+    @FXML private Button SubmitAll;
+    @FXML private TextField UsernameField;
+    @FXML private PasswordField passfield;
+    @FXML ImageView hamburgerView = new ImageView();
+    @FXML ImageView userView = new ImageView();
+    @FXML ImageView logoView = new ImageView();
+    @FXML ImageView logoView1 = new ImageView();
     @FXML Label userNameLabel = new Label();
     @FXML ImageView lessonImage = new ImageView();
     @FXML ImageView question1 = new ImageView();
     @FXML ImageView question2 = new ImageView();
     @FXML ImageView question3 = new ImageView();
-
+    @FXML Label lessonTitle = new Label();
+    @FXML Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane = new Pane();
 
     private  String userInput = null;
     private String passInput = null;
     private Boolean truelogin = false;
     UserList linkedlist = new sample.UserList();
-    ReadandWrite getData = new ReadandWrite();
+    //ReadandWrite getData = new ReadandWrite();
     JFrame frame = new JFrame();
     int lessonState = 0;
-    char[] answers;
-
-
-
-    @FXML
-    Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane ,lessonPane2,lessonPane3, lessonPane4= new Pane();
+    char[] answers = new char[3];
+    char[] userAnswers = new char[3];
+    private int grade1, grade2, grade3, grade4, gradeQuiz;
+    Image hamburger = new Image("/resources/hamburger.png");
+    Image userIcon = new Image("/resources/usericon.png");
+    Image logo = new Image("/resources/dsdt.png");
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        getData.readfromFile();
+       // getData.readfromFile();
         hamburgerView.setImage(hamburger);
         userView.setImage(userIcon);
         logoView.setImage(logo);
@@ -154,15 +117,14 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        linkedlist.add(userInput, passInput, grade);
+        linkedlist.add(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
         Alert alert = new Alert((Alert.AlertType.CONFIRMATION));
         alert.setTitle("Confirmed");
         alert.setHeaderText("Account Created");
         alert.showAndWait();
         linkedlist.printUsers();
-        getData.writeToFile(userInput, passInput,grade);
+        //getData.writeToFile(userInput, passInput,grade);
     }
-
 
     //Side Menu
     @FXML
@@ -196,7 +158,36 @@ public class Controller extends Main implements Initializable {
         switchPane("lessonMenu");
     }
 
+    @FXML public void Q1A(){userAnswers[0] = 'a';}
+    @FXML public void Q1B(){userAnswers[0] = 'b';}
+    @FXML public void Q1C(){userAnswers[0] = 'c';}
+    @FXML public void Q2A(){userAnswers[1] = 'a';}
+    @FXML public void Q2B(){userAnswers[1] = 'b';}
+    @FXML public void Q2C(){userAnswers[1] = 'c';}
+    @FXML public void Q3A(){userAnswers[2] = 'a';}
+    @FXML public void Q3B(){userAnswers[2] = 'b';}
+    @FXML public void Q3C(){userAnswers[2] = 'c';}
     //Lessons
+
+    @FXML public void submitButtonHandler() throws Exception {
+        String currentLesson = lessonTitle.getText();
+        if (currentLesson .equals("Product Rule"))
+        {
+            productRuleSubmit();
+        }
+        if (currentLesson .equals("Power Rule"))
+        {
+            powerRuleSubmit();
+        }
+        if (currentLesson .equals("Chain Rule"))
+        {
+            chainRuleSubmit();
+        }
+        if (currentLesson .equals("Exponential Rule"))
+        {
+            exponentRuleSubmit();
+        }
+    }
     @FXML
     public void productRuleHandler() {
         switchPane("lessons");
@@ -208,6 +199,18 @@ public class Controller extends Main implements Initializable {
         question3.setImage(imgArray[2]) ;
         lessonState = 2;
         answers = lesson2.getAnswers();
+        lessonTitle.setText("Product Rule");
+    }
+
+    @FXML public void productRuleSubmit() throws Exception {int count = 0;
+        for (int i = 0; i < answers.length; i++) {
+            if(userAnswers[i] == answers[i])
+            {
+                count++;
+            }
+        }
+        grade2 = count;
+    displayReaction(grade2);
     }
 
     @FXML
@@ -221,33 +224,72 @@ public class Controller extends Main implements Initializable {
         question3.setImage(imgArray[2]) ;
         lessonState = 1;
         answers = lesson1.getAnswers();
+        lessonTitle.setText("Power Rule");
 
+    }
+    @FXML public void powerRuleSubmit() throws Exception {int count = 0;
+        for (int i = 0; i < answers.length; i++) {
+            if(userAnswers[i] == answers[i])
+            {
+                count++;
+            }
+        }
+        grade1 = count;
+        displayReaction(grade1);
     }
 
     @FXML
     public void chainRuleHandler() {
         switchPane("lessons");
         Lesson lesson3 = new Lesson(3);
+        lessonImage.setImage(lesson3.getLessonImage());
         Image[] imgArray = lesson3.getQuestionImages();
         question1.setImage(imgArray[0]) ;
         question2.setImage(imgArray[1]);
         question3.setImage(imgArray[2]) ;
         lessonState = 3;
         answers = lesson3.getAnswers();
+        lessonTitle.setText("Chain Rule");
 
+    }
+    @FXML public void chainRuleSubmit() throws Exception {        int count = 0;
+        for (int i = 0; i < answers.length; i++) {
+            if(userAnswers[i] == answers[i])
+            {
+                count++;
+            }
+        }
+        grade3 = count;
+        displayReaction(grade3);
     }
 
     @FXML
     public void exponentRuleHandler() {
         switchPane("lessons");
-        Lesson lesson4 = new Lesson(3);
+        Lesson lesson4 = new Lesson(4);
+        lessonImage.setImage(lesson4.getLessonImage());
         Image[] imgArray = lesson4.getQuestionImages();
         question1.setImage(imgArray[0]) ;
         question2.setImage(imgArray[1]);
         question3.setImage(imgArray[2]) ;
         lessonState = 4;
         answers = lesson4.getAnswers();
+        lessonTitle.setText("Exponential Rule");
     }
+
+    @FXML public void exponentRuleSubmit() throws Exception {
+        int count = 0;
+        for (int i = 0; i < answers.length; i++) {
+            if(userAnswers[i] == answers[i])
+            {
+                count++;
+            }
+        }
+        grade4 = count;
+        displayReaction(grade2);
+    }
+
+
     @FXML
     public void nextLesson(){
     switch(lessonState)
@@ -262,66 +304,6 @@ public class Controller extends Main implements Initializable {
             break;
 
     }
-    }
-
-    @FXML
-    public void questionAnswer(ActionEvent e) {
-        if (e.getSource() == Q1A) {
-            answered++;
-            Q1B.setDisable(true);
-            Q1C.setDisable(true);
-        } else if (e.getSource() == Q1B) {
-            answered++;
-            Q1A.setDisable(true);
-            Q1C.setDisable(true);
-        } else if (e.getSource() == Q1C) {
-            answered++;
-            Q1B.setDisable(true);
-            Q1A.setDisable(true);
-        } else if (e.getSource() == Q2A) {
-            answered++;
-            Q2B.setDisable(true);
-            Q2C.setDisable(true);
-        } else if (e.getSource() == Q2B) {
-            answered++;
-            Q2A.setDisable(true);
-            Q2C.setDisable(true);
-        } else if (e.getSource() == Q2C) {
-            answered++;
-            Q2B.setDisable(true);
-            Q2A.setDisable(true);
-        } else if (e.getSource() == Q3A) {
-            answered++;
-            Q3B.setDisable(true);
-            Q3C.setDisable(true);
-        } else if (e.getSource() == Q3B) {
-            answered++;
-            Q3A.setDisable(true);
-            Q3C.setDisable(true);
-        } else if (e.getSource() == Q3C) {
-            answered++;
-            Q3B.setDisable(true);
-            Q3A.setDisable(true);
-        }
-
-    }
-
-    @FXML
-    public void submitAllHandler(ActionEvent event) throws Exception {
-        if (answered >= 3) {
-            if (!Q1B.isDisabled() && !Q2A.isDisabled() && !Q3B.isDisabled()) {
-                displayReaction(3);
-            } else if ((!Q1B.isDisabled() && !Q2A.isDisabled()) || (!Q2A.isDisabled() && !Q3B.isDisabled()) || (!Q1A.isDisabled() && !Q3B.isDisabled())) {
-                displayReaction(2);
-            } else if (!Q1B.isDisabled() || !Q2A.isDisabled() || !Q3B.isDisabled()) {
-                displayReaction(1);
-            } else
-                displayReaction(0);
-        }
-    }
-
-    @FXML
-    public void quizzesHandler(ActionEvent actionEvent) {
     }
 
     public void displayReaction(int correct) throws Exception {

@@ -14,6 +14,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -110,6 +113,83 @@
                               <Font size="36.0" />
                            </font>
                         </Label>
+                        <GridPane layoutX="305.0" layoutY="118.0" prefHeight="367.0" prefWidth="341.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Power Rule">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Product Rule" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Chain Rule" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Exponential Rule" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label GridPane.rowIndex="4" />
+                              <Label text="Quiz" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total Grade" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lesson1Text" text="0" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lesson2Text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lesson3Text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lesson4Text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="quizGrade" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totGrade" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane id="Quizzes" fx:id="quizPane" layoutX="-1.0" prefHeight="572.0" prefWidth="810.0" visible="false">
@@ -156,8 +236,8 @@
                   </AnchorPane>
                   <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
                      <children>
-                        <Button layoutX="559.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
+                        <Button layoutX="714.0" layoutY="-1.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="35.33333333333337" AnchorPane.topAnchor="-1.0" />
+                        <Label fx:id="lessonTitle" layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" AnchorPane.topAnchor="-3.0">
                            <font>
                               <Font name="System Bold" size="17.0" />
                            </font>
@@ -184,10 +264,10 @@
                                              <content>
                                                 <AnchorPane prefHeight="240.0" prefWidth="802.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q1A1" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q1B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q1C1" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <ImageView fx:id="question1" fitHeight="150.0" fitWidth="200.0" layoutX="514.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <RadioButton fx:id="Q1A1" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#Q1A" text="A" />
+                                                      <RadioButton fx:id="Q1B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#Q1B" text="B" />
+                                                      <RadioButton fx:id="Q1C1" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#Q1C" text="C" />
+                                                      <ImageView fx:id="question1" fitHeight="174.0" fitWidth="296.0" layoutX="418.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
                                                    </children>
                                                 </AnchorPane>
                                              </content>
@@ -196,10 +276,10 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q2A1" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q2B1" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q2C1" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <ImageView fx:id="question2" fitHeight="150.0" fitWidth="200.0" layoutX="551.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <RadioButton fx:id="Q2A1" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#Q2A" text="A" />
+                                                      <RadioButton fx:id="Q2B1" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#Q2B" text="B" />
+                                                      <RadioButton fx:id="Q2C1" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#Q2C" text="C" />
+                                                      <ImageView fx:id="question2" fitHeight="195.0" fitWidth="312.0" layoutX="439.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
                                                    </children>
                                                 </AnchorPane>
                                              </content>
@@ -208,11 +288,11 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="638.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q3A1" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#questionAnswer" text="A" />
-                                                      <RadioButton fx:id="Q3B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#questionAnswer" text="B" />
-                                                      <RadioButton fx:id="Q3C1" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#questionAnswer" text="C" />
-                                                      <Button fx:id="SubmitAll1" layoutX="192.0" layoutY="197.0" mnemonicParsing="false" onAction="#submitAllHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
-                                                      <ImageView fx:id="question3" fitHeight="150.0" fitWidth="200.0" layoutX="524.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <RadioButton fx:id="Q3A1" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#Q3A" text="A" />
+                                                      <RadioButton fx:id="Q3B1" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#Q3B" text="B" />
+                                                      <RadioButton fx:id="Q3C1" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#Q3C" text="C" />
+                                                      <Button fx:id="SubmitAll1" layoutX="192.0" layoutY="197.0" mnemonicParsing="false" onAction="#submitButtonHandler" prefHeight="26.0" prefWidth="100.0" text="Submit All" />
+                                                      <ImageView fx:id="question3" fitHeight="194.0" fitWidth="297.0" layoutX="427.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
                                                    </children>
                                                 </AnchorPane>
                                              </content>
