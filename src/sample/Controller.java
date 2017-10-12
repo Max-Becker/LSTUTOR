@@ -316,33 +316,29 @@ public class Controller extends Main implements Initializable {
 
     public void displayReaction(int correct) throws Exception {
         if (correct == 3) {
-            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("GreatJob.fxml"));
-            Scene newScene = new Scene(newSceneRoot, 640, 400);
-
-            Stage window = (Stage) (SubmitAll.getScene().getWindow());
-            window.setScene(newScene);
-            window.show();
+            Image image = new Image("/resources/HappyIcon.png");
+            ImageView imageView = new ImageView(image);
+            Alert alert = new Alert(Alert.AlertType.NONE);
+            alert.setGraphic(imageView);
+            alert.showAndWait();
         } else if (correct == 2) {
-            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("NotQuite.fxml"));
-            Scene newScene = new Scene(newSceneRoot, 640, 400);
-
-            Stage window = (Stage) (SubmitAll.getScene().getWindow());
-            window.setScene(newScene);
-            window.show();
+            Image image = new Image("/sample/SorryIcon.png");
+            ImageView imageView = new ImageView(image);
+            Alert alert = new Alert(Alert.AlertType.NONE);
+            alert.setGraphic(imageView);
+            alert.showAndWait();
         } else if (correct == 1) {
-            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("NoBueno.fxml"));
-            Scene newScene = new Scene(newSceneRoot, 640, 400);
-
-            Stage window = (Stage) (SubmitAll.getScene().getWindow());
-            window.setScene(newScene);
-            window.show();
+            Image image = new Image("/sample/WorryIcon.png");
+            ImageView imageView = new ImageView(image);
+            Alert alert = new Alert(Alert.AlertType.NONE);
+            alert.setGraphic(imageView);
+            alert.showAndWait();
         } else if (correct == 0) {
-            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("NoBueno2.fxml"));
-            Scene newScene = new Scene(newSceneRoot, 640, 400);
-
-            Stage window = (Stage) (SubmitAll.getScene().getWindow());
-            window.setScene(newScene);
-            window.show();
+            Image image = new Image("/sample/WorryIcon.png");
+            ImageView imageView = new ImageView(image);
+            Alert alert = new Alert(Alert.AlertType.NONE);
+            alert.setGraphic(imageView);
+            alert.showAndWait();
         }
     }
 
