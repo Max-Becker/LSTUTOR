@@ -5,12 +5,14 @@ class node {
     public node next;
     public String userName;
     public String password;
+    public int grades;
 
 
-    public node(String User, String Password)
+    public node(String User, String Password, int Grades)
     {
         userName = User;
         password = Password;
+        grades = Grades;
 
     }
     public void printNode()
@@ -31,9 +33,9 @@ class UserList{
         return head == null;
     }
 
-    public void add(String Name, String Pass)
+    public void add(String Name, String Pass, int Grad)
     {
-        node newNode = new node(Name, Pass);
+        node newNode = new node(Name, Pass,Grad);
         newNode.next = head;
         head = newNode;
     }
