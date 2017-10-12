@@ -66,7 +66,9 @@ public class Controller extends Main implements Initializable {
     ImageView logoView1 = new ImageView();
     @FXML Label userNameLabel = new Label();
     @FXML ImageView lessonImage = new ImageView();
-
+    @FXML ImageView question1 = new ImageView();
+    @FXML ImageView question2 = new ImageView();
+    @FXML ImageView question3 = new ImageView();
 
 
     private  String userInput = null;
@@ -75,6 +77,7 @@ public class Controller extends Main implements Initializable {
     UserList linkedlist = new sample.UserList();
     JFrame frame = new JFrame();
     int lessonState = 0;
+    char[] answers;
 
 
 
@@ -197,7 +200,12 @@ public class Controller extends Main implements Initializable {
         switchPane("lessons");
         Lesson lesson2 = new Lesson(2);
         lessonImage.setImage(lesson2.getLessonImage());
+        Image[] imgArray = lesson2.getQuestionImages();
+        question1.setImage(imgArray[0]) ;
+        question2.setImage(imgArray[1]);
+        question3.setImage(imgArray[2]) ;
         lessonState = 2;
+        answers = lesson2.getAnswers();
     }
 
     @FXML
@@ -205,19 +213,38 @@ public class Controller extends Main implements Initializable {
         switchPane("lessons");
         Lesson lesson1 = new Lesson(1);
         lessonImage.setImage(lesson1.getLessonImage());
+        Image[] imgArray = lesson1.getQuestionImages();
+        question1.setImage(imgArray[0]) ;
+        question2.setImage(imgArray[1]);
+        question3.setImage(imgArray[2]) ;
         lessonState = 1;
+        answers = lesson1.getAnswers();
+
     }
 
     @FXML
     public void chainRuleHandler() {
         switchPane("lessons");
+        Lesson lesson3 = new Lesson(3);
+        Image[] imgArray = lesson3.getQuestionImages();
+        question1.setImage(imgArray[0]) ;
+        question2.setImage(imgArray[1]);
+        question3.setImage(imgArray[2]) ;
         lessonState = 3;
+        answers = lesson3.getAnswers();
+
     }
 
     @FXML
     public void exponentRuleHandler() {
         switchPane("lessons");
+        Lesson lesson4 = new Lesson(3);
+        Image[] imgArray = lesson4.getQuestionImages();
+        question1.setImage(imgArray[0]) ;
+        question2.setImage(imgArray[1]);
+        question3.setImage(imgArray[2]) ;
         lessonState = 4;
+        answers = lesson4.getAnswers();
     }
     @FXML
     public void nextLesson(){
