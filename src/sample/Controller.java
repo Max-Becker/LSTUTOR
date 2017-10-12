@@ -145,15 +145,17 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void gradeHandler() {
         switchPane("grades");
-        labelLesson.setText(Integer.toString(grade1));
-        labelLesson1.setText(Integer.toString(grade2));
-        String grade3String = Integer.toString(grade3);
+        labelLesson.setText(Double.toString((double)grade1*100/3));
+        labelLesson1.setText(Double.toString((double)grade2*100/3));
+        String grade3String = Double.toString((double)grade3*100/3);
 
-        labelLesson2.setText(Integer.toString(grade3));
-        String grade4String = Integer.toString(grade4);
+        labelLesson2.setText(Double.toString((double)grade3*100/3));
+        String grade4String = Double.toString((double)grade4*100/3);
         labelLesson3.setText(grade4String);
-        quizGradeLabel.setText(Integer.toString(gradeQuiz));
-        totalGrade.setText(Double.toString((grade1+grade2+grade3+grade4)/4*.5+gradeQuiz*.5));
+        quizGradeLabel.setText(Double.toString((double)gradeQuiz));
+        double gradetot = (((double)grade1*100/3+(double)grade2*100/3+(double)grade3*100/3+
+                (double)grade4*100/3)/4*.5+(double)gradeQuiz*100/10*.5);
+        totalGrade.setText(Double.toString(gradetot));
     }
 
     @FXML
@@ -268,7 +270,7 @@ public class Controller extends Main implements Initializable {
             }
         }
         grade3 = count;
-        //displayReaction(grade3);
+        displayReaction(grade3);
     }
 
     @FXML
