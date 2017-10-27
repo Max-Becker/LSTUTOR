@@ -14,9 +14,9 @@ public class Lesson {
 //    Image question21 = new Image("");
 //    Image question22 = new Image("");
 //    Image question23 = new Image("");
-    Image question31 = new Image("/resources/ChainQuestion1.png");
-    Image question32 = new Image("/resources/ChainQuestion2.png");
-    Image question33 = new Image("/resources/ChainQuestion3.png");
+    Image question31 = new Image("/resources/ChainQuestion1.JPG");
+    Image question32 = new Image("/resources/ChainQuestion2.JPG");
+    Image question33 = new Image("/resources/ChainQuestion3.JPG");
     Image question41 = new Image("/resources/expq1.png");
     Image question42 = new Image("/resources/expq2.png");
     Image question43 = new Image("/resources/expq3.png");
