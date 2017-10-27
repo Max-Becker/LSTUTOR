@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Changed some stuff">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/LSTUTOR-master/src/sample/ReadandWrite.java" afterPath="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/Controller.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/LSTUTOR/sample/sample.fxml" />
@@ -453,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507772012890</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed some stuff">
+      <created>1509145361898</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1509145361898</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
