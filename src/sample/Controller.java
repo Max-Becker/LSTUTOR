@@ -43,13 +43,16 @@ public class Controller extends Main implements Initializable {
     private  String userInput = null;
     private String passInput = null;
     private Boolean truelogin = false;
+    private ToggleGroup group = new ToggleGroup();
+    @FXML RadioButton Q1A1, Q1A11,Q1A12, Q1B1, Q1B11,Q1B12,Q1C1,Q1C11,Q1C12;
     UserList linkedlist = new sample.UserList();
-    //ReadandWrite getData = new ReadandWrite();
+    ReadandWrite getData = new ReadandWrite();
+    ReadandWrite store = new ReadandWrite();
     JFrame frame = new JFrame();
     int lessonState = 0;
     char[] answers = new char[3];
     char[] userAnswers = new char[3];
-    private int grade1 = 0, grade2 = 0, grade3 = 0, grade4 = 0, gradeQuiz = 0;
+    private int grade1=0, grade2 = 0, grade3 = 0, grade4 = 0, gradeQuiz = 0;
     Image hamburger = new Image("/resources/hamburger.png");
     Image userIcon = new Image("/resources/usericon.png");
     Image logo = new Image("/resources/dsdt.png");
@@ -67,6 +70,16 @@ public class Controller extends Main implements Initializable {
         logoView1.setImage(logo);
         Qreaction.setImage(happy);
         switchPane("logIn");
+        Q1A1.setToggleGroup(group);
+        Q1A11.setToggleGroup(group);
+        Q1A12.setToggleGroup(group);
+        Q1B1.setToggleGroup(group);
+        Q1B11.setToggleGroup(group);
+        Q1B12.setToggleGroup(group);
+        Q1C1.setToggleGroup(group);
+        Q1C11.setToggleGroup(group);
+        Q1C12.setToggleGroup(group);
+
     }
 
     @FXML
@@ -77,6 +90,7 @@ public class Controller extends Main implements Initializable {
         passInput = passfield.getText();
         node temp = linkedlist.getNode();
         node first = temp;
+        store.readfromFile();
         if(linkedlist.isEmpty()== true)
         {
             Alert alert = new Alert((Alert.AlertType.ERROR));
@@ -133,7 +147,7 @@ public class Controller extends Main implements Initializable {
         alert.setHeaderText("Account Created");
         alert.showAndWait();
         linkedlist.printUsers();
-        //getData.writeToFile(userInput, passInput,grade);
+        getData.writeToFile(userInput, passInput,  grade1, grade2, grade3, grade4, gradeQuiz);
     }
 
     //Side Menu
@@ -182,7 +196,7 @@ public class Controller extends Main implements Initializable {
         switchPane("lessonMenu");
     }
 
-    @FXML public void Q1A(){userAnswers[0] = 'a';}
+    @FXML public void Q1A(){ userAnswers[0] = 'a';}
     @FXML public void Q1B(){userAnswers[0] = 'b';}
     @FXML public void Q1C(){userAnswers[0] = 'c';}
     @FXML public void Q2A(){userAnswers[1] = 'a';}
