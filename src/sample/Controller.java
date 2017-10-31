@@ -62,6 +62,7 @@ public class Controller extends Main implements Initializable {
     char userQuizAnswer;
     int quizcount = 0;
     char quizAnswer;
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -118,7 +119,7 @@ public class Controller extends Main implements Initializable {
                     else
                     {
                         Alert alert = new Alert((Alert.AlertType.ERROR));
-                        alert.setTitle("Acount Not Found");
+                        alert.setTitle("Account Not Found");
                         alert.setHeaderText("Incorrect Password");
                         alert.showAndWait();
 
@@ -204,12 +205,7 @@ public class Controller extends Main implements Initializable {
     @FXML public void Q1A(){ userAnswers[0] = 'a';}
     @FXML public void Q1B(){userAnswers[0] = 'b';}
     @FXML public void Q1C(){userAnswers[0] = 'c';}
-    @FXML public void Q2A(){userAnswers[1] = 'a';}
-    @FXML public void Q2B(){userAnswers[1] = 'b';}
-    @FXML public void Q2C(){userAnswers[1] = 'c';}
-    @FXML public void Q3A(){userAnswers[2] = 'a';}
-    @FXML public void Q3B(){userAnswers[2] = 'b';}
-    @FXML public void Q3C(){userAnswers[2] = 'c';}
+
 
     @FXML public void QuizA(){userQuizAnswer = 'a';}
     @FXML public void QuizB(){userQuizAnswer = 'b';}
@@ -224,202 +220,131 @@ public class Controller extends Main implements Initializable {
         darkBGPane.setVisible(true);
         if (currentLesson .equals("Product Rule"))
         {
-            productRuleSubmit();
-            if(grade1 == 1|| grade1==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade1 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade1 == 3)
+
+            if(answers[0] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Power Rule"))
         {
-            powerRuleSubmit();
-            if(grade2 == 1|| grade2==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade2 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade2 == 3)
+            if(answers[0] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Chain Rule"))
         {
-            chainRuleSubmit();
-            if(grade3 == 1|| grade3==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade3 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade3 == 3)
+            if(answers[0] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Exponential Rule"))
         {
-            exponentRuleSubmit();
-            if(grade4 == 1|| grade4==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade4 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade4 == 3)
+            if(answers[0] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
     }
-    @FXML public void submitButtonHandler() throws Exception {
-        String currentLesson = lessonTitle.getText();
-        if (currentLesson .equals("Product Rule"))
-        {
-            productRuleSubmit();
-            if(grade1 == 1|| grade1==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade1 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade1 == 3)
-            {
-                Qreaction.setImage(happy);
-            }
-        }
-        if (currentLesson .equals("Power Rule"))
-        {
-            powerRuleSubmit();
-            if(grade2 == 1|| grade2==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade2 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade2 == 3)
-            {
-                Qreaction.setImage(happy);
-            }
-        }
-        if (currentLesson .equals("Chain Rule"))
-        {
-            chainRuleSubmit();
-            if(grade3 == 1|| grade3==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade3 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade3 == 3)
-            {
-                Qreaction.setImage(happy);
-            }
-        }
-        if (currentLesson .equals("Exponential Rule"))
-        {
-            exponentRuleSubmit();
-            if(grade4 == 1|| grade4==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade4 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade4 == 3)
-            {
-                Qreaction.setImage(happy);
-            }
-        }
-    }
+
+
     @FXML public void submitQ2ButtonHandler() throws Exception {
         String currentLesson = lessonTitle.getText();
         modalBox.setVisible(true);
         darkBGPane.setVisible(true);
         if (currentLesson .equals("Product Rule"))
         {
-            productRuleSubmit();
-            if(grade1 == 1|| grade1==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade1 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade1 == 3)
+
+            if(answers[1] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Power Rule"))
         {
-            powerRuleSubmit();
-            if(grade2 == 1|| grade2==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade2 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade2 == 3)
+            if(answers[1] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Chain Rule"))
         {
-            chainRuleSubmit();
-            if(grade3 == 1|| grade3==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade3 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade3 == 3)
+            if(answers[1] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Exponential Rule"))
         {
-            exponentRuleSubmit();
-            if(grade4 == 1|| grade4==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade4 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade4 == 3)
+            if(answers[1] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
     }
@@ -429,66 +354,63 @@ public class Controller extends Main implements Initializable {
         darkBGPane.setVisible(true);
         if (currentLesson .equals("Product Rule"))
         {
-            productRuleSubmit();
-            if(grade1 == 1|| grade1==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade1 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade1 == 3)
+
+            if(answers[2] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Power Rule"))
         {
-            powerRuleSubmit();
-            if(grade2 == 1|| grade2==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade2 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade2 == 3)
+            if(answers[2] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Chain Rule"))
         {
-            chainRuleSubmit();
-            if(grade3 == 1|| grade3==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade3 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade3 == 3)
+            if(answers[2] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
         if (currentLesson .equals("Exponential Rule"))
         {
-            exponentRuleSubmit();
-            if(grade4 == 1|| grade4==0)
-            {
-                Qreaction.setImage(worry);
-            }
-            else if(grade4 == 2)
-            {
-                Qreaction.setImage(sorry);
-            }
-            else if(grade4 == 3)
+            if(answers[2] == userAnswers[0])
             {
                 Qreaction.setImage(happy);
+            }
+            else
+            {
+                int randomNum = 1 + (int)(Math.random()*2);
+                if(randomNum == 1)
+                    Qreaction.setImage(worry);
+                else
+                    Qreaction.setImage(sorry);
             }
         }
     }
@@ -510,13 +432,10 @@ public class Controller extends Main implements Initializable {
         lessonTitle.setText("Product Rule");
     }
 
-    @FXML public void productRuleSubmit() throws Exception {int count = 0;
-        for (int i = 0; i < answers.length; i++) {
-            if(userAnswers[i] == answers[i])
-            {
-                count++;
-            }
-        }
+    @FXML public void productRuleSubmit() throws Exception
+    {
+        int count = 0;
+
         grade2 = count;
     }
 
