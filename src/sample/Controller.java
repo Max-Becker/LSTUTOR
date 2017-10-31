@@ -44,7 +44,9 @@ public class Controller extends Main implements Initializable {
     private String passInput = null;
     private Boolean truelogin = false;
     private ToggleGroup group = new ToggleGroup();
+    private ToggleGroup quizGroup = new ToggleGroup();
     @FXML RadioButton Q1A1, Q1A11,Q1A12, Q1B1, Q1B11,Q1B12,Q1C1,Q1C11,Q1C12;
+    @FXML RadioButton QuizA, QuizB, QuizC;
     UserList linkedlist = new sample.UserList();
     ReadandWrite getData = new ReadandWrite();
     ReadandWrite store = new ReadandWrite();
@@ -79,6 +81,10 @@ public class Controller extends Main implements Initializable {
         Q1C1.setToggleGroup(group);
         Q1C11.setToggleGroup(group);
         Q1C12.setToggleGroup(group);
+        QuizA.setToggleGroup(quizGroup);
+        QuizB.setToggleGroup(quizGroup);
+        QuizC.setToggleGroup(quizGroup);
+
 
     }
 
@@ -584,6 +590,13 @@ public class Controller extends Main implements Initializable {
         if (i==10)
         {
             switchPane("mainMenu");
+            if (gradeQuiz >= 8){ Qreaction.setImage(happy); }
+            if (gradeQuiz >= 5 && gradeQuiz< 8){Qreaction.setImage(sorry);
+            }
+            if (gradeQuiz >= 3 && gradeQuiz < 5){Qreaction.setImage(worry);}
+            if (gradeQuiz >= 0 && gradeQuiz < 3){ Qreaction.setImage(worry);}
+            modalBox.setVisible(true);
+            darkBGPane.setVisible(true);
         }
             i++;
             Quiz quiz = new Quiz(i);
@@ -622,36 +635,7 @@ public class Controller extends Main implements Initializable {
 
     }
     }
-//
-//    public void displayReaction(int correct) throws Exception {
-//        if (correct == 3) {
-//            Image image = new Image("/resources/HappyIcon.png");
-//            ImageView imageView = new ImageView(image);
-//            Alert alert = new Alert(Alert.AlertType.NONE);
-//            alert.setGraphic(imageView);
-//            alert.showAndWait();
-//        } else if (correct == 2) {
-//            Image image = new Image("/sample/SorryIcon.png");
-//            ImageView imageView = new ImageView(image);
-//            Alert alert = new Alert(Alert.AlertType.NONE);
-//            alert.setGraphic(imageView);
-//            alert.showAndWait();
-//        } else if (correct == 1) {
-//            Image image = new Image("/sample/WorryIcon.png");
-//            ImageView imageView = new ImageView(image);
-//            Alert alert = new Alert(Alert.AlertType.NONE);
-//            alert.setGraphic(imageView);
-//            alert.showAndWait();
-//        } else if (correct == 0) {
-//            Image image = new Image("/sample/WorryIcon.png");
-//            ImageView imageView = new ImageView(image);
-//            Alert alert = new Alert(Alert.AlertType.NONE);
-//            alert.setGraphic(imageView);
-//            alert.showAndWait();
-//        }
-//    }
-//
-//    //switchPanes
+
     public void switchPane(String visiblePane) {
         Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false;
         if (visiblePane.equals("logIn")) {

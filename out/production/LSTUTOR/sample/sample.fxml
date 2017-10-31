@@ -384,10 +384,10 @@
                   <AnchorPane fx:id="darkBGPane" opacity="0.33" prefHeight="610.0" prefWidth="839.0" style="-fx-background-color: BLACK;" visible="false" />
                   <AnchorPane fx:id="modalBox" layoutX="321.0" layoutY="194.0" maxHeight="213.0" prefHeight="213.0" prefWidth="237.0" style="-fx-background-color: WHITE;" visible="false">
                      <children>
-                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="19.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label layoutX="215.0" layoutY="2.0" text="X">
+                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="208.0" layoutY="-2.0" onMouseClicked="#closeModalHandler" text="X">
                            <font>
-                              <Font size="36.0" />
+                              <Font name="Arial" size="36.0" />
                            </font>
                         </Label>
                      </children>
