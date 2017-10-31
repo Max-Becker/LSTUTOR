@@ -351,6 +351,8 @@ public class Controller extends Main implements Initializable {
     }
     @FXML public void submitQ2ButtonHandler() throws Exception {
         String currentLesson = lessonTitle.getText();
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
         if (currentLesson .equals("Product Rule"))
         {
             productRuleSubmit();
@@ -418,6 +420,8 @@ public class Controller extends Main implements Initializable {
     }
     @FXML public void submitQ3ButtonHandler() throws Exception {
         String currentLesson = lessonTitle.getText();
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
         if (currentLesson .equals("Product Rule"))
         {
             productRuleSubmit();
@@ -483,7 +487,10 @@ public class Controller extends Main implements Initializable {
             }
         }
     }
-
+    @FXML public void closeModalHandler() throws Exception{
+        modalBox.setVisible(false);
+        darkBGPane.setVisible(false);
+    }
     @FXML
     public void productRuleHandler() {
         switchPane("lessons");
