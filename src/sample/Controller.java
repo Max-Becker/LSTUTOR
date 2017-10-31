@@ -39,7 +39,7 @@ public class Controller extends Main implements Initializable {
     @FXML Image happy = new Image("/resources/HappyIcon.png");
     @FXML Label lessonTitle, labelLesson,labelLesson1,labelLesson2,labelLesson3,quizGradeLabel,totalGrade = new Label();
     @FXML Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane, modalBox, darkBGPane = new Pane();
-
+    @FXML boolean flag1 = false ,flag2 = false ,flag3 = false ,flag4 = false ;
     private  String userInput = null;
     private String passInput = null;
     private Boolean truelogin = false;
@@ -84,8 +84,6 @@ public class Controller extends Main implements Initializable {
         QuizA.setToggleGroup(quizGroup);
         QuizB.setToggleGroup(quizGroup);
         QuizC.setToggleGroup(quizGroup);
-
-
     }
 
     @FXML
@@ -631,6 +629,8 @@ public class Controller extends Main implements Initializable {
         case 3: exponentRuleHandler();
             break;
         case 4: switchPane("mainMenu");
+            flag4 = true;
+            quizPane.setDisable(false);
             break;
 
     }
@@ -638,6 +638,7 @@ public class Controller extends Main implements Initializable {
 
     public void switchPane(String visiblePane) {
         Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false;
+
         if (visiblePane.equals("logIn")) {
             logIn = true;
             hamburgerView.setDisable(true);
@@ -647,7 +648,13 @@ public class Controller extends Main implements Initializable {
             lessonMenu = true;
         }
         if (visiblePane.equals("quiz")) {
-            quiz = true;
+
+            if (flag4 == false)
+            {
+                quiz = false;
+                mainMenu = true;
+            }
+            else{quiz = true;}
         }
         if (visiblePane.equals("grades")) {
             grades = true;
