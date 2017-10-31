@@ -12,7 +12,11 @@ class node {
     {
         userName = User;
         password = Password;
-
+        gradeL1 = grade1;
+        gradeL2 = grade2;
+        gradeL3 = grade3;
+        gradeL4 = grade4;
+        this.gradeQuiz = gradeQuiz;
 
     }
     public void printNode()

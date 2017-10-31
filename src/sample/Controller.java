@@ -88,10 +88,11 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        node temp = linkedlist.getNode();
-        node first = temp;
+        node temp;
+
         store.readfromFile();
-        if(linkedlist.isEmpty()== true)
+        temp = store.getNode();
+        if(store.isEmpty()== true)
         {
             Alert alert = new Alert((Alert.AlertType.ERROR));
             alert.setTitle("Users");
@@ -141,13 +142,13 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        linkedlist.add(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
+        store.add(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
         Alert alert = new Alert((Alert.AlertType.CONFIRMATION));
         alert.setTitle("Confirmed");
         alert.setHeaderText("Account Created");
         alert.showAndWait();
-        linkedlist.printUsers();
-        getData.writeToFile(userInput, passInput,  grade1, grade2, grade3, grade4, gradeQuiz);
+        store.printUsers();
+        store.writeToFile(userInput, passInput,  grade1, grade2, grade3, grade4, gradeQuiz);
     }
 
     //Side Menu
