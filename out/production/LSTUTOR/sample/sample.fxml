@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0">
          <top>
@@ -76,11 +76,17 @@
                                     <Font size="36.0" />
                                  </font>
                               </Label>
+                              <Label text="Settings">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </VBox>
+                        <Label layoutX="335.0" layoutY="300.0" text="Must finish all assignments first" />
                      </children>
                   </AnchorPane>
-                    <AnchorPane id="login" fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
+                    <AnchorPane id="login" fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0">
                         <children>
                             <Label layoutX="274.0" layoutY="158.0" text="Username:">
                                 <font>
@@ -239,7 +245,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
+                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0" visible="false">
                      <children>
                         <Button layoutX="714.0" layoutY="-1.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="35.33333333333337" AnchorPane.topAnchor="-1.0" />
                         <Label fx:id="lessonTitle" layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" visible="false" AnchorPane.topAnchor="-3.0">
@@ -247,13 +253,13 @@
                               <Font name="System Bold" size="17.0" />
                            </font>
                         </Label>
-                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                        <SplitPane dividerPositions="0.5" layoutY="25.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="640.0" visible="false" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
                            <items>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="638.0">
                                  <children>
-                                    <ScrollPane layoutY="11.0" prefHeight="273.0" prefWidth="813.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="9.0">
+                                    <ScrollPane layoutY="11.0" prefHeight="273.0" prefWidth="813.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="9.0">
                                        <content>
-                                          <ImageView fx:id="lessonImage" fitHeight="752.0" fitWidth="785.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="lessonImage" fitHeight="752.0" fitWidth="785.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                                        </content>
                                     </ScrollPane>
                                  </children>
@@ -261,9 +267,9 @@
                                     <Insets top="2.0" />
                                  </padding>
                               </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" visible="false">
                                  <children>
-                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
+                                    <TabPane prefHeight="186.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.8000000000000114">
                                        <tabs>
                                           <Tab id="L1Q1" fx:id="L1Q11" text="Question 1">
                                              <content>
@@ -284,7 +290,7 @@
                                                             <Font size="24.0" />
                                                          </font>
                                                       </RadioButton>
-                                                      <ImageView fx:id="question1" fitHeight="174.0" fitWidth="296.0" layoutX="261.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <ImageView fx:id="question1" fitHeight="174.0" fitWidth="296.0" layoutX="261.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                                                       <Button fx:id="SubmitAll1" layoutX="359.0" layoutY="200.0" mnemonicParsing="false" onAction="#submitQ1ButtonHandler" prefHeight="26.0" prefWidth="100.0" text="Submit" />
                                                    </children>
                                                 </AnchorPane>
@@ -377,6 +383,11 @@
                                     <Font size="36.0" />
                                  </font>
                               </Label>
+                              <Label text="Settings">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -384,10 +395,10 @@
                   <AnchorPane fx:id="darkBGPane" opacity="0.33" prefHeight="610.0" prefWidth="839.0" style="-fx-background-color: BLACK;" visible="false" />
                   <AnchorPane fx:id="modalBox" layoutX="321.0" layoutY="194.0" maxHeight="213.0" prefHeight="213.0" prefWidth="237.0" style="-fx-background-color: WHITE;" visible="false">
                      <children>
-                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label layoutX="208.0" layoutY="-2.0" onMouseClicked="#closeModalHandler" text="X">
+                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="19.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="215.0" layoutY="2.0" text="X">
                            <font>
-                              <Font name="Arial" size="36.0" />
+                              <Font size="36.0" />
                            </font>
                         </Label>
                      </children>
