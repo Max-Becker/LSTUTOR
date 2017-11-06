@@ -193,6 +193,12 @@ public class Controller extends Main implements Initializable {
     }
 
     @FXML
+    public void settingHandler() {
+        switchPane("settings");
+    }
+
+
+    @FXML
     public void logoutHandler() {
         switchPane("logIn");
     }
