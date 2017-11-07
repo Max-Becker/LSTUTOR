@@ -57,7 +57,55 @@ class UserList{
         return head;
     }
 
+    public int search(String username, String password)
+    {
+        node temp = head;
 
+        if(temp == null)
+        {
+            return 0;
+        }
+          else {
+            while (temp != null) {
+                if (temp.userName.equals(username)) {
+                    if (temp.password.equals(password)) {
+                        return 2;
+                    } else {
+                        return 1;
+                    }
+
+                }
+
+                temp = temp.next;
+            }
+        }
+
+
+
+        return 3;
+    }
+
+    public int changepass(String username, String password)
+    {
+        node temp = head;
+        if(temp == null)
+        {
+            return 0;
+        }
+        while(temp != null)
+        {
+            if(temp.userName.equals(username))
+            {
+                System.out.println("User: " + temp.userName + "\nPass: " + temp.password);
+                temp.password = password;
+
+                System.out.println("newPass: " + temp.password);
+                return 1;
+            }
+            temp = temp.next;
+        }
+        return 2;
+    }
 
 
 

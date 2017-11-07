@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0">
          <top>
@@ -72,6 +72,11 @@
                                  </font>
                               </Label>
                               <Label onMouseClicked="#logoutHandler" prefHeight="85.0" prefWidth="129.0" text="Log Out">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label onMouseClicked="#settingHandler" text="Settings">
                                  <font>
                                     <Font size="36.0" />
                                  </font>
@@ -349,6 +354,12 @@
                         </SplitPane>
                      </children>
                   </AnchorPane>
+                  <AnchorPane fx:id="settingPane" prefHeight="623.0" prefWidth="839.0" visible="false">
+                     <children>
+                        <Button layoutX="373.0" layoutY="319.0" mnemonicParsing="false" onAction="#changeImageButtonHandler" onMouseClicked="#changeImageButtonHandler" text="Change Image" />
+                        <Button layoutX="365.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#changePasswordButtonHandler" text="Change Password" />
+                     </children>
+                  </AnchorPane>
                   <AnchorPane id="sideMenu" fx:id="sideMenuPane" layoutY="-41.0" prefHeight="603.0" prefWidth="207.0" style="-fx-background-color: f4f4f4; -fx-border-color: BLACK;" visible="false">
                      <children>
                         <VBox layoutX="14.0" layoutY="2.0" prefHeight="600.0" prefWidth="191.0" style="-fx-background-color: f4f4f4;">
@@ -378,6 +389,11 @@
                                     <Font size="36.0" />
                                  </font>
                               </Label>
+                              <Label onMouseClicked="#settingHandler" text="Settings">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -392,6 +408,20 @@
                            </font>
                         </Label>
                      </children>
+                  </AnchorPane>
+                  <AnchorPane id="newPassPane" fx:id="newPasswordPane" layoutX="300.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <TextField id="NewPassField" fx:id="newPassField" layoutX="26.0" layoutY="88.0" />
+                        <Label layoutX="54.0" layoutY="68.0" text="New Password:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="84.0" layoutY="119.0" mnemonicParsing="false" onAction="#setButtonHandler" text="Set" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </AnchorPane>
                </children>
             </AnchorPane>

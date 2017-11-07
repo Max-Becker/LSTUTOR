@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.*;
 import javafx.fxml.FXML;
+
+import java.io.File;
 import java.util.*;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +23,7 @@ import java.util.ResourceBundle;
 public class Controller extends Main implements Initializable {
     int i = 0;
     @FXML private Button SubmitAll;
-    @FXML private TextField UsernameField;
+    @FXML private TextField UsernameField, newPassField;
     @FXML private PasswordField passfield;
     @FXML ImageView hamburgerView = new ImageView();
     @FXML ImageView userView = new ImageView();
@@ -38,10 +40,11 @@ public class Controller extends Main implements Initializable {
     @FXML Image sorry = new Image("/resources/SorryIcon.png");
     @FXML Image happy = new Image("/resources/HappyIcon.png");
     @FXML Label lessonTitle, labelLesson,labelLesson1,labelLesson2,labelLesson3,quizGradeLabel,totalGrade = new Label();
-    @FXML Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane, modalBox, darkBGPane = new Pane();
+    @FXML Pane sideMenuPane, lessonMenuPane, loginPane, gradePane, quizPane, lessonPane, mainMenuPane, modalBox, darkBGPane, settingPane, newPasswordPane = new Pane();
     @FXML boolean flag1 = false ,flag2 = false ,flag3 = false ,flag4 = false ;
     private  String userInput = null;
     private String passInput = null;
+    private String newPassInput = null;
     private Boolean truelogin = false;
     private ToggleGroup group = new ToggleGroup();
     private ToggleGroup quizGroup = new ToggleGroup();
@@ -93,20 +96,26 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        node temp;
 
-        store.readfromFile();
-        temp = store.getNode();
-        if(store.isEmpty()== true)
+        node temp;
+        int login = store.search(userInput, passInput);
+        if(userInput.isEmpty() == true || passInput.isEmpty() == true)
+        {
+            Alert error = new Alert((Alert.AlertType.CONFIRMATION));
+            error.setTitle("Error");
+            error.setHeaderText("No Username or Password Entered");
+            error.showAndWait();
+        }
+        else if(store.isEmpty()== true)
         {
             Alert alert = new Alert((Alert.AlertType.ERROR));
             alert.setTitle("Users");
             alert.setHeaderText("No accounts registered");
             alert.showAndWait();
         }
-        else
-        {
-
+        if(login == 2|| login == 1) {
+            store.readfromFile();
+            temp = store.getNode();
             while (temp != null)
             {
                 if (temp.userName.equals(userInput))
@@ -116,12 +125,13 @@ public class Controller extends Main implements Initializable {
                         userNameLabel.setText(temp.userName);
                         switchPane("mainMenu");
                     }
-                    else
+                    else if( login == 1 )
                     {
                         Alert alert = new Alert((Alert.AlertType.ERROR));
                         alert.setTitle("Account Not Found");
                         alert.setHeaderText("Incorrect Password");
                         alert.showAndWait();
+                        break;
 
                     }
                 }
@@ -147,13 +157,37 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-        store.add(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
-        Alert alert = new Alert((Alert.AlertType.CONFIRMATION));
-        alert.setTitle("Confirmed");
-        alert.setHeaderText("Account Created");
-        alert.showAndWait();
-        store.printUsers();
-        store.writeToFile(userInput, passInput,  grade1, grade2, grade3, grade4, gradeQuiz);
+        int created = store.search(userInput,passInput);
+        if(userInput.isEmpty() == true || passInput.isEmpty() == true)
+        {
+            Alert error = new Alert((Alert.AlertType.CONFIRMATION));
+            error.setTitle("Error");
+            error.setHeaderText("No Username or Password Entered");
+            error.showAndWait();
+        }
+        else {
+
+            if(created == 1 || created == 2)
+            {
+                Alert notify = new Alert((Alert.AlertType.CONFIRMATION));
+                notify.setTitle("Error");
+                notify.setHeaderText("User Already Exists");
+                notify.showAndWait();
+            }
+            if (created == 0|| created == 3)
+            {
+                store.add(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
+                Alert first = new Alert((Alert.AlertType.CONFIRMATION));
+                first.setTitle("Confirmed");
+                first.setHeaderText("Account Created");
+                first.showAndWait();
+                store.printUsers();
+                store.writeToFile(userInput, passInput, grade1, grade2, grade3, grade4, gradeQuiz);
+            }
+
+
+        }
+        System.out.print(created);
     }
 
     //Side Menu
@@ -195,6 +229,39 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void logoutHandler() {
         switchPane("logIn");
+    }
+
+    @FXML
+    public void settingHandler() {
+        switchPane("settings");
+    }
+
+    @FXML
+    public void changeImageButtonHandler() {
+        Stage secondaryStage = new Stage();
+        final FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(secondaryStage);
+        if (file != null) {
+            userView.setImage(new Image(file.toURI().toString()));
+        }
+    }
+
+    @FXML
+    public void changePasswordButtonHandler() {
+        switchPane("newPassPane");
+    }
+
+    @FXML
+    public void setButtonHandler() {
+        userInput = UsernameField.getText();
+        newPassInput = newPassField.getText();
+        //store.changepass(userInput, newPassInput);
+        store.writeToFile(userInput, newPassInput, grade1, grade2, grade3, grade4, gradeQuiz);
+
+        Alert error = new Alert((Alert.AlertType.CONFIRMATION));
+        error.setTitle("Success");
+        error.setHeaderText("Password Updated");
+        error.showAndWait();
     }
 
     @FXML
@@ -556,7 +623,7 @@ public class Controller extends Main implements Initializable {
     }
 
     public void switchPane(String visiblePane) {
-        Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false;
+        Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false, settings = false, newPassword = false;
 
         if (visiblePane.equals("logIn")) {
             logIn = true;
@@ -585,11 +652,19 @@ public class Controller extends Main implements Initializable {
             mainMenu = true;
             hamburgerView.setDisable(false);
         }
+        if (visiblePane.equals("settings")) {
+            settings = true;
+        }
+        if (visiblePane.equals("newPassPane")) {
+            newPassword = true;
+        }
         lessonPane.setVisible(lessons);
         lessonMenuPane.setVisible(lessonMenu);
         loginPane.setVisible(logIn);
         quizPane.setVisible(quiz);
         gradePane.setVisible(grades);
         mainMenuPane.setVisible(mainMenu);
+        settingPane.setVisible(settings);
+        newPasswordPane.setVisible(newPassword);
     }
 }

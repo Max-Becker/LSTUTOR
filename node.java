@@ -42,15 +42,6 @@ class UserList{
 
 }
 
-class Testing {
 
-	public static void main(String[] args) {
-		
-		UserList list = new UserList();
-		list.add("user", "pass");
-		list.add("Juan","DeDios96");
-		list.printUsers();
-
-	}
 
 }
