@@ -11,7 +11,7 @@ public class Quiz {
     Image quiz5 = new Image("/resources/q5.png");
     Image quiz6 = new Image("/resources/q6.png");
     Image quiz7 = new Image("/resources/q7.png");
-    Image quiz8 = new Image("/resources/q7.png");
+    Image quiz8 = new Image("/resources/q8.png");
     Image quiz9 = new Image("/resources/q9.png");
     Image quiz10 = new Image("/resources/q10.png");
     Image questionImage;

@@ -65,6 +65,7 @@ public class Controller extends Main implements Initializable {
     char userQuizAnswer;
     int quizcount = 0;
     char quizAnswer;
+    int quizQuestion = 1;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -96,25 +97,31 @@ public class Controller extends Main implements Initializable {
     {
         userInput = UsernameField.getText();
         passInput = passfield.getText();
-
+        store.readfromFile();
+        int empty = 1;
         node temp;
         int login = store.search(userInput, passInput);
         if(userInput.isEmpty() == true || passInput.isEmpty() == true)
+        {
+            empty = 0;
+        }
+        if(empty == 0)
         {
             Alert error = new Alert((Alert.AlertType.CONFIRMATION));
             error.setTitle("Error");
             error.setHeaderText("No Username or Password Entered");
             error.showAndWait();
         }
-        else if(store.isEmpty()== true)
+
+        else if(login == 0 && empty != 0)
         {
             Alert alert = new Alert((Alert.AlertType.ERROR));
             alert.setTitle("Users");
             alert.setHeaderText("No accounts registered");
             alert.showAndWait();
         }
-        if(login == 2|| login == 1) {
-            store.readfromFile();
+        else if(login == 2|| login == 1) {
+
             temp = store.getNode();
             while (temp != null)
             {
@@ -125,28 +132,30 @@ public class Controller extends Main implements Initializable {
                         userNameLabel.setText(temp.userName);
                         switchPane("mainMenu");
                     }
-                    else if( login == 1 )
-                    {
-                        Alert alert = new Alert((Alert.AlertType.ERROR));
-                        alert.setTitle("Account Not Found");
-                        alert.setHeaderText("Incorrect Password");
-                        alert.showAndWait();
-                        break;
 
-                    }
                 }
-                else if(truelogin == false)
+                else if( login == 1 )
                 {
                     Alert alert = new Alert((Alert.AlertType.ERROR));
-                    alert.setTitle("Found?");
-                    alert.setHeaderText("Account not found");
+                    alert.setTitle("Account Not Found");
+                    alert.setHeaderText("Incorrect Password");
                     alert.showAndWait();
+                    break;
+
                 }
+
                 temp = temp.next;
             }
             truelogin = false;
 
 
+        }
+        else if(truelogin == false)
+        {
+            Alert alert = new Alert((Alert.AlertType.ERROR));
+            alert.setTitle("Found?");
+            alert.setHeaderText("Account not found");
+            alert.showAndWait();
         }
 
 
@@ -155,6 +164,7 @@ public class Controller extends Main implements Initializable {
 
     public void createAccountHandler() throws Exception
     {
+
         userInput = UsernameField.getText();
         passInput = passfield.getText();
         int created = store.search(userInput,passInput);
@@ -187,8 +197,8 @@ public class Controller extends Main implements Initializable {
 
 
         }
-        System.out.print(created);
     }
+
 
     //Side Menu
     @FXML
@@ -204,8 +214,7 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void quizHandler() {
         switchPane("quiz");
-        i++;
-        Quiz quiz = new Quiz(i);
+        Quiz quiz = new Quiz(quizQuestion);
         quizAnswer = quiz.getQuizAnswer();
         questionimg.setImage(quiz.getQuizImage());
     }
@@ -227,14 +236,20 @@ public class Controller extends Main implements Initializable {
     }
 
     @FXML
-    public void settingHandler() {
-        switchPane("settings");
-    }
-
-
-    @FXML
     public void logoutHandler() {
         switchPane("logIn");
+        userInput = null;
+        String passInput = null;
+        Boolean truelogin = false;
+        lessonState = 0;
+        answers = new char[3];
+        userAnswers = new char[3];
+        grade1=0; grade2 = 0; grade3 = 0; grade4 = 0; gradeQuiz = 0;
+        //UserInput[];
+
+        quizcount = 0;
+
+         quizQuestion = 1;
     }
 
     @FXML
@@ -512,6 +527,18 @@ public class Controller extends Main implements Initializable {
         grade2 = count;
     }
 
+    /*@FMXL
+    public void changePassHandler()
+    {
+        Alert error = new Alert((Alert.AlertType.CONFIRMATION));
+        error.setTitle("Change Password");
+        error.setHeaderText("New Password:");
+        error.showAndWait();
+        error.
+        String newpass =
+        store.changepass(userInput,passInput);
+    }*/
+
     @FXML
     public void powerRuleHandler() {
         switchPane("lessons");
@@ -577,8 +604,11 @@ public class Controller extends Main implements Initializable {
     @FXML
     public void nextQuizQuestion()
     {
-        if (i==10)
+
+
+        if (quizQuestion>10)
         {
+            flag4 = false;
             switchPane("mainMenu");
             if (gradeQuiz >= 8){ Qreaction.setImage(happy); }
             if (gradeQuiz >= 5 && gradeQuiz< 8){Qreaction.setImage(sorry);
@@ -588,14 +618,15 @@ public class Controller extends Main implements Initializable {
             modalBox.setVisible(true);
             darkBGPane.setVisible(true);
         }
-            i++;
-            Quiz quiz = new Quiz(i);
+        System.out.print(quizQuestion);
+          Quiz quiz = new Quiz(quizQuestion);
             quizAnswer = quiz.getQuizAnswer();
             questionimg.setImage(quiz.getQuizImage());
             if (userQuizAnswer == quizAnswer) {
                 quizcount++;
 
         }
+       quizQuestion++;
         gradeQuiz = quizcount;
     }
 
@@ -640,6 +671,7 @@ public class Controller extends Main implements Initializable {
             lessonMenu = true;
         }
         if (visiblePane.equals("quiz")) {
+
 
             if (flag4 == false)
             {

@@ -11,9 +11,9 @@ public class Lesson {
     Image question11 = new Image("/resources/Lesson1Q1.png");
     Image question12 = new Image("/resources/Lesson1Q2.png");
     Image question13 = new Image("/resources/Lesson1Q3.png");
-//    Image question21 = new Image("");
-//    Image question22 = new Image("");
-//    Image question23 = new Image("");
+    Image question21 = new Image("/resources/Product1.png");
+    Image question22 = new Image("/resources/Product2.png");
+    Image question23 = new Image("/resources/Product3.png");
     Image question31 = new Image("/resources/ChainQuestion1.png");
     Image question32 = new Image("/resources/ChainQuestion2.png");
     Image question33 = new Image("/resources/ChainQuestion3.png");
@@ -24,9 +24,9 @@ public class Lesson {
     char q1a = 'a';
     char q1b = 'b';
     char q1c = 'b';
-    char q2a;
-    char q2b;
-    char q2c;
+    char q2a = 'b';
+    char q2b = 'b';
+    char q2c = 'a';
     char q3a = 'c';
     char q3b = 'a';
     char q3c = 'c';
@@ -54,9 +54,9 @@ public class Lesson {
                 break;
             case 2:
                 lessonImage = lesson2;
-//                question1 = question21;
-//                question2 = question22;
-//                question3 = question23;
+               question1 = question21;
+                question2 = question22;
+                question3 = question23;
                 answer1 = q2a;
                 answer2 = q2b;
                 answer3 = q2c;

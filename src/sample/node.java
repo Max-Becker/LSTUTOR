@@ -96,10 +96,7 @@ class UserList{
         {
             if(temp.userName.equals(username))
             {
-                System.out.println("User: " + temp.userName + "\nPass: " + temp.password);
                 temp.password = password;
-
-                System.out.println("newPass: " + temp.password);
                 return 1;
             }
             temp = temp.next;
