@@ -65,6 +65,11 @@ public class Controller extends Main implements Initializable {
     char userQuizAnswer;
     int quizcount = 0;
     char quizAnswer;
+    ControlCenter c = ControlCenter.getControl();
+    Observer o = new Observer();
+    long startTime, endTime, totalTime;
+    int incount = 0;
+    long[] totTime = new long[3];
     int quizQuestion = 1;
 
     @Override
@@ -293,7 +298,12 @@ public class Controller extends Main implements Initializable {
     @FXML public void Q1A(){ userAnswers[0] = 'a';}
     @FXML public void Q1B(){userAnswers[0] = 'b';}
     @FXML public void Q1C(){userAnswers[0] = 'c';}
-
+    @FXML public void Q2A(){ userAnswers[1] = 'a';}
+    @FXML public void Q2B(){userAnswers[1] = 'b';}
+    @FXML public void Q2C(){userAnswers[1] = 'c';}
+    @FXML public void Q3A(){ userAnswers[2] = 'a';}
+    @FXML public void Q3B(){userAnswers[2] = 'b';}
+    @FXML public void Q3C(){userAnswers[2] = 'c';}
 
     @FXML public void QuizA(){userQuizAnswer = 'a';}
     @FXML public void QuizB(){userQuizAnswer = 'b';}
@@ -303,211 +313,28 @@ public class Controller extends Main implements Initializable {
     //Lessons
 
     @FXML public void submitQ1ButtonHandler() throws Exception {
-        String currentLesson = lessonTitle.getText();
-        modalBox.setVisible(true);
-        darkBGPane.setVisible(true);
-        if (currentLesson .equals("Product Rule"))
-        {
+         endTime   = System.currentTimeMillis();
+         totalTime = endTime - startTime;
+         totTime[0] = totalTime;
 
-            if(answers[0] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Power Rule"))
-        {
-            if(answers[0] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Chain Rule"))
-        {
-            if(answers[0] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Exponential Rule"))
-        {
-            if(answers[0] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
     }
-
-
     @FXML public void submitQ2ButtonHandler() throws Exception {
-        String currentLesson = lessonTitle.getText();
-        modalBox.setVisible(true);
-        darkBGPane.setVisible(true);
-        if (currentLesson .equals("Product Rule"))
-        {
+         endTime   = System.currentTimeMillis();
+         totalTime = endTime - startTime;
+        totTime[1] = totalTime;
 
-            if(answers[1] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Power Rule"))
-        {
-            if(answers[1] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Chain Rule"))
-        {
-            if(answers[1] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Exponential Rule"))
-        {
-            if(answers[1] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
     }
     @FXML public void submitQ3ButtonHandler() throws Exception {
-        String currentLesson = lessonTitle.getText();
-        modalBox.setVisible(true);
-        darkBGPane.setVisible(true);
-        if (currentLesson .equals("Product Rule"))
-        {
+         endTime   = System.currentTimeMillis();
+         totalTime = endTime - startTime;
+        totTime[2] = totalTime;
 
-            if(answers[2] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Power Rule"))
-        {
-            if(answers[2] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Chain Rule"))
-        {
-            if(answers[2] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
-        if (currentLesson .equals("Exponential Rule"))
-        {
-            if(answers[2] == userAnswers[0])
-            {
-                Qreaction.setImage(happy);
-            }
-            else
-            {
-                int randomNum = 1 + (int)(Math.random()*2);
-                if(randomNum == 1)
-                    Qreaction.setImage(worry);
-                else
-                    Qreaction.setImage(sorry);
-            }
-        }
     }
     @FXML public void closeModalHandler() throws Exception{
         modalBox.setVisible(false);
         darkBGPane.setVisible(false);
     }
-    @FXML
-    public void productRuleHandler() {
+    @FXML public void productRuleHandler() {
         switchPane("lessons");
         Lesson lesson2 = new Lesson(2);
         lessonImage.setImage(lesson2.getLessonImage());
@@ -523,8 +350,28 @@ public class Controller extends Main implements Initializable {
     @FXML public void productRuleSubmit() throws Exception
     {
         int count = 0;
+        for (int i = 0; i < answers.length; i++) {
+            if(userAnswers[i] == answers[i])
+            {
+                count++;
+            }
+        }
+        grade1 = count;
 
-        grade2 = count;
+        incount = 3 - count;
+        c.setCorrect(count,lessonState);
+        c.setIncorrectAns(incount,lessonState);
+        totalTime = 0;
+        for (int j = 0; j <3 ; j++) {
+            totalTime += totTime[j];
+        }
+        totalTime =  (totalTime / 3)/1000;
+        int totTime = Math.round(totalTime);
+        c.setTime(totTime, lessonState);
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
+        o.setImage((int)c.getState(lessonState));
+
     }
 
     /*@FMXL
@@ -551,9 +398,11 @@ public class Controller extends Main implements Initializable {
         lessonState = 1;
         answers = lesson1.getAnswers();
         lessonTitle.setText("Power Rule");
+         startTime = System.currentTimeMillis();
 
     }
-    @FXML public void powerRuleSubmit() throws Exception {int count = 0;
+    @FXML public void powerRuleSubmit() throws Exception {
+        int count = 0;
         for (int i = 0; i < answers.length; i++) {
             if(userAnswers[i] == answers[i])
             {
@@ -561,6 +410,21 @@ public class Controller extends Main implements Initializable {
             }
         }
         grade1 = count;
+
+        incount = 3 - count;
+        c.setCorrect(count,lessonState);
+        c.setIncorrectAns(incount,lessonState);
+        totalTime = 0;
+        for (int j = 0; j <3 ; j++) {
+            totalTime += totTime[j];
+        }
+        totalTime =  (totalTime / 3)/1000;
+        int totTime = Math.round(totalTime);
+        c.setTime(totTime, lessonState);
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
+        o.setImage((int)c.getState(lessonState));
+
     }
 
     @FXML
@@ -575,16 +439,32 @@ public class Controller extends Main implements Initializable {
         lessonState = 3;
         answers = lesson3.getAnswers();
         lessonTitle.setText("Chain Rule");
+        startTime = System.currentTimeMillis();
 
     }
-    @FXML public void chainRuleSubmit() throws Exception {        int count = 0;
+    @FXML public void chainRuleSubmit() throws Exception { int count = 0;
         for (int i = 0; i < answers.length; i++) {
             if(userAnswers[i] == answers[i])
             {
                 count++;
             }
         }
-        grade3 = count;
+        grade1 = count;
+
+        incount = 3 - count;
+        c.setCorrect(count,lessonState);
+        c.setIncorrectAns(incount,lessonState);
+        totalTime = 0;
+        for (int j = 0; j <3 ; j++) {
+            totalTime += totTime[j];
+        }
+        totalTime =  (totalTime / 3)/1000;
+        int totTime = Math.round(totalTime);
+        c.setTime(totTime, lessonState);
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
+        o.setImage((int)c.getState(lessonState));
+
     }
 
     @FXML
@@ -599,6 +479,8 @@ public class Controller extends Main implements Initializable {
         lessonState = 4;
         answers = lesson4.getAnswers();
         lessonTitle.setText("Exponential Rule");
+        startTime = System.currentTimeMillis();
+
     }
 
     @FXML
@@ -638,20 +520,39 @@ public class Controller extends Main implements Initializable {
                 count++;
             }
         }
-        grade4 = count;
+        grade1 = count;
+
+        incount = 3 - count;
+        c.setCorrect(count,lessonState);
+        c.setIncorrectAns(incount,lessonState);
+        totalTime = 0;
+        for (int j = 0; j <3 ; j++) {
+            totalTime += totTime[j];
+        }
+        totalTime =  (totalTime / 3)/1000;
+        int totTime = Math.round(totalTime);
+        c.setTime(totTime, lessonState);
+        modalBox.setVisible(true);
+        darkBGPane.setVisible(true);
+        o.setImage((int)c.getState(lessonState));
+
     }
 
     @FXML
-    public void nextLesson(){
+    public void nextLesson() throws Exception {
     switch(lessonState)
     {
-        case 1: productRuleHandler();
+        case 1:powerRuleSubmit();
+            productRuleHandler();
             break;
-        case 2: chainRuleHandler();
+        case 2: productRuleSubmit();
+            chainRuleHandler();
             break;
-        case 3: exponentRuleHandler();
+        case 3: chainRuleSubmit();
+        exponentRuleHandler();
             break;
-        case 4: switchPane("mainMenu");
+        case 4: exponentRuleSubmit();
+            switchPane("mainMenu");
             flag4 = true;
             quizPane.setDisable(false);
             break;
@@ -660,6 +561,7 @@ public class Controller extends Main implements Initializable {
     }
 
     public void switchPane(String visiblePane) {
+        sideMenuPane.setVisible(false);
         Boolean logIn = false, lessons = false, quiz = false, grades = false, lessonMenu = false, mainMenu = false, settings = false, newPassword = false;
 
         if (visiblePane.equals("logIn")) {

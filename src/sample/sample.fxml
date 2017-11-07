@@ -47,7 +47,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane id="Main menu" fx:id="mainMenuPane" layoutX="-1.0" layoutY="-3.0" prefHeight="602.0" prefWidth="839.0">
+                  <AnchorPane id="Main menu" fx:id="mainMenuPane" layoutX="-1.0" layoutY="-3.0" prefHeight="602.0" prefWidth="839.0" visible="false">
                      <children>
                         <ImageView fx:id="logoView1" fitHeight="138.0" fitWidth="119.0" layoutX="348.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -245,7 +245,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0" visible="false">
+                  <AnchorPane id="Lesson1" fx:id="lessonPane" layoutX="-1.0" layoutY="-2.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="593.0" prefWidth="830.0">
                      <children>
                         <Button layoutX="714.0" layoutY="-1.0" mnemonicParsing="false" onAction="#nextLesson" text="Next Lesson" AnchorPane.rightAnchor="35.33333333333337" AnchorPane.topAnchor="-1.0" />
                         <Label fx:id="lessonTitle" layoutX="307.0" layoutY="-3.0" prefHeight="34.0" prefWidth="180.0" text="Lesson #1: Power Rule" visible="false" AnchorPane.topAnchor="-3.0">
@@ -300,17 +300,17 @@
                                              <content>
                                                 <AnchorPane prefHeight="267.0" prefWidth="843.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q1A11" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#Q1A" text="A">
+                                                      <RadioButton fx:id="Q1A11" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#Q2A" text="A">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
                                                       </RadioButton>
-                                                      <RadioButton fx:id="Q1B11" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#Q1B" text="B">
+                                                      <RadioButton fx:id="Q1B11" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#Q2B" text="B">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
                                                       </RadioButton>
-                                                      <RadioButton fx:id="Q1C11" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#Q1C" text="C">
+                                                      <RadioButton fx:id="Q1C11" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#Q2C" text="C">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
@@ -325,17 +325,17 @@
                                              <content>
                                                 <AnchorPane prefHeight="267.0" prefWidth="843.0">
                                                    <children>
-                                                      <RadioButton fx:id="Q1A12" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#Q1A" text="A">
+                                                      <RadioButton fx:id="Q1A12" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#Q3A" text="A">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
                                                       </RadioButton>
-                                                      <RadioButton fx:id="Q1B12" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#Q1B" text="B">
+                                                      <RadioButton fx:id="Q1B12" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#Q3B" text="B">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
                                                       </RadioButton>
-                                                      <RadioButton fx:id="Q1C12" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#Q1C" text="C">
+                                                      <RadioButton fx:id="Q1C12" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#Q3C" text="C">
                                                          <font>
                                                             <Font size="24.0" />
                                                          </font>
