@@ -22,7 +22,7 @@ public class ReadandWrite extends UserList
 
             bw.write(user+"/"+pass+"/"+ grade1+"/"+ grade2+"/"+grade3+"/"+grade4+"/"+gradeQuiz+"-");
             bw.close();
-
+//ok
         }
         catch(IOException e)
         {
