@@ -65,12 +65,13 @@ class UserList{
         {
             return 0;
         }
-          else {
+        else {
             while (temp != null) {
                 if (temp.userName.equals(username)) {
                     if (temp.password.equals(password)) {
                         return 2;
-                    } else {
+                    }
+                    else {
                         return 1;
                     }
 
@@ -103,7 +104,6 @@ class UserList{
         }
         return 2;
     }
-
 
 
 

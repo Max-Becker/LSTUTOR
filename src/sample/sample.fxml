@@ -21,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <children>
+   <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0">
          <top>
             <AnchorPane prefHeight="40.0" prefWidth="640.0" BorderPane.alignment="CENTER">
@@ -86,33 +86,33 @@
                         <Label layoutX="335.0" layoutY="300.0" text="Must finish all assignments first" />
                      </children>
                   </AnchorPane>
-                    <AnchorPane id="login" fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
-                        <children>
-                            <Label layoutX="274.0" layoutY="158.0" text="Username:">
-                                <font>
-                                    <Font size="16.0" />
-                                </font>
-                            </Label>
-                            <Label layoutX="276.0" layoutY="225.0" text="Password:">
-                                <font>
-                                    <Font size="16.0" />
-                                </font>
-                            </Label>
-                            <TextField id="userNameField" fx:id="UsernameField" layoutX="385.0" layoutY="154.0" />
-                            <Button fx:id="logInBtn" layoutX="367.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                            <Button layoutX="355.0" layoutY="379.0" mnemonicParsing="false" onAction="#createAccountHandler" text="Create Account" />
-                            <ImageView fx:id="logoView" fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../resources/dsdt.png" />
-                                </image>
-                            </ImageView>
-                            <PasswordField fx:id="passfield" layoutX="385.0" layoutY="225.0" />
-                        </children>
-                    </AnchorPane>
+                  <AnchorPane id="login" fx:id="loginPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="561.0" prefWidth="800.0" visible="false">
+                     <children>
+                        <Label layoutX="274.0" layoutY="158.0" text="Username:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="276.0" layoutY="225.0" text="Password:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField id="userNameField" fx:id="UsernameField" layoutX="385.0" layoutY="154.0" />
+                        <Button fx:id="logInBtn" layoutX="367.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginButtonHandler" text="Log In">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="355.0" layoutY="379.0" mnemonicParsing="false" onAction="#createAccountHandler" text="Create Account" />
+                        <ImageView fx:id="logoView" fitHeight="138.0" fitWidth="119.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/dsdt.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="passfield" layoutX="385.0" layoutY="225.0" />
+                     </children>
+                  </AnchorPane>
                   <AnchorPane id="Grades" fx:id="gradePane" layoutX="10.0" layoutY="10.0" prefHeight="561.0" prefWidth="799.0" visible="false">
                      <children>
                         <Label layoutX="340.0" layoutY="5.0" text="Grades">
@@ -399,14 +399,16 @@
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="darkBGPane" opacity="0.33" prefHeight="610.0" prefWidth="839.0" style="-fx-background-color: BLACK;" visible="false" />
-                  <AnchorPane fx:id="modalBox" layoutX="321.0" layoutY="194.0" maxHeight="213.0" prefHeight="213.0" prefWidth="237.0" style="-fx-background-color: WHITE;" visible="false">
+                  <AnchorPane fx:id="modalBox" layoutX="331.0" layoutY="194.0" maxHeight="259.0" prefHeight="259.0" prefWidth="244.0" style="-fx-background-color: WHITE;" visible="false">
                      <children>
-                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="Qreaction" fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
                         <Label layoutX="208.0" layoutY="-2.0" onMouseClicked="#closeModalHandler" text="X">
                            <font>
                               <Font name="Arial" size="36.0" />
                            </font>
                         </Label>
+                        <Label fx:id="emojiresponse" layoutX="18.0" layoutY="183.0" prefHeight="26.0" prefWidth="208.0" />
+                        <Button fx:id="hintButton" layoutX="85.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#hintButton" text="Yes, please" />
                      </children>
                   </AnchorPane>
                   <AnchorPane id="newPassPane" fx:id="newPasswordPane" layoutX="300.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" visible="false">
@@ -427,5 +429,5 @@
             </AnchorPane>
          </center>
       </BorderPane>
-    </children>
+   </children>
 </VBox>

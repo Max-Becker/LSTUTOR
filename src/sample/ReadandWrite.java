@@ -3,6 +3,7 @@ package sample;
 import java.io.*;
 import java.lang.*;
 
+
 public class ReadandWrite extends UserList
 {
     private File newFile= new File("./src/resources/DATA.txt");
@@ -60,5 +61,44 @@ public class ReadandWrite extends UserList
         {
             e.printStackTrace();
         }
+    }
+    public  void emptyFile()
+    {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        try
+        {
+            fw = new FileWriter(newFile,false);
+            bw = new BufferedWriter(fw);
+
+            bw.write("");
+            bw.close();
+//ok
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+    public  void overwrite(String user, String pass,  int grade1,int grade2,int grade3,int grade4,int gradeQuiz)
+    {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        try
+        {
+
+            fw = new FileWriter(newFile,true);
+            bw = new BufferedWriter((fw));
+
+            bw.write(user+"/"+pass+"/"+ grade1+"/"+ grade2+"/"+grade3+"/"+grade4+"/"+gradeQuiz+"-");
+            bw.close();
+//ok
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
     }
 }

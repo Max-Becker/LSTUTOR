@@ -27,12 +27,17 @@ public class Quiz {
     char q10 = 'b';
     char answer;
 
-    public Quiz(int num)
+    public Quiz()
+    {
+        answer = 'b';
+        questionImage = quiz1;
+    }
+    public void setQuiz(int num)
     {
         switch(num){
             case 1: answer = q1;
-            questionImage = quiz1;
-            break;
+                questionImage = quiz1;
+                break;
             case 2:answer = q2;
                 questionImage = quiz2;
                 break;
